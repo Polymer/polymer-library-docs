@@ -42,12 +42,12 @@ an element name with a class, so you can add properties and methods to your cust
 element. The custom element's name **must start with an ASCII letter and
 contain a dash (-)**.
 
-<demo-tabs selected="0" name="qt-1-register" editor-open-file="custom-element.js" project-path="/3.0/start/samples/custom-element">
+<demo-tabs selected="0" name="qt-1-register" editor-open-file="custom-element.js" project-path="/3.0/docs/samples/custom-element">
   <paper-tab slot="tabs">custom-element.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/custom-element/custom-element.js -->
+<!-- include_file 3.0/docs/samples/custom-element/custom-element.js -->
 ```
 
   </div>
@@ -55,7 +55,7 @@ contain a dash (-)**.
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/custom-element/index.html -->
+<!-- include_file 3.0/docs/samples/custom-element/index.html -->
 ```
 
   </div>
@@ -85,12 +85,12 @@ You can use the `ready` callback for one-time initialization work after the elem
 Many elements include some internal DOM nodes to implement the element's UI and behavior.
 You can use Polymer's DOM templating to create a shadow DOM tree for your element.
 
-<demo-tabs selected="0" name="qt-2-shadow-dom" editor-open-file="dom-element.js" project-path="/3.0/start/samples/dom-element">
+<demo-tabs selected="0" name="qt-2-shadow-dom" editor-open-file="dom-element.js" project-path="/3.0/docs/samples/dom-element">
   <paper-tab slot="tabs">dom-element.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/dom-element/dom-element.js -->
+<!-- include_file 3.0/docs/samples/dom-element/dom-element.js -->
 ```
 
   </div>
@@ -98,7 +98,7 @@ You can use Polymer's DOM templating to create a shadow DOM tree for your elemen
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/dom-element/index.html -->
+<!-- include_file 3.0/docs/samples/dom-element/index.html -->
 ```
 
   </div>
@@ -119,12 +119,12 @@ so they render as if they were inserted into the shadow DOM tree.
 This example creates a simple tag that decorates an image by wrapping it
 with a styled `<div>` tag.
 
-<demo-tabs selected="0" name="qt-3-compose" editor-open-file="picture-frame.js" project-path="/3.0/start/samples/picture-frame">
+<demo-tabs selected="0" name="qt-3-compose" editor-open-file="picture-frame.js" project-path="/3.0/docs/samples/picture-frame">
   <paper-tab slot="tabs">picture-frame.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/picture-frame/picture-frame.js -->
+<!-- include_file 3.0/docs/samples/picture-frame/picture-frame.js -->
 ```
 
   </div>
@@ -132,7 +132,7 @@ with a styled `<div>` tag.
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/picture-frame/index.html -->
+<!-- include_file 3.0/docs/samples/picture-frame/index.html -->
 ```
 
   </div>
@@ -158,12 +158,12 @@ Data binding is a great way to quickly propagate changes in your element and red
 You can bind properties in your component using the "double-mustache" syntax (`{%raw%}{{}}{%endraw%}`).
 The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced between the brackets.
 
-<demo-tabs selected="0" name="qt-4-data-binding" editor-open-file="name-tag.js" project-path="/3.0/start/samples/name-tag">
+<demo-tabs selected="0" name="qt-4-data-binding" editor-open-file="name-tag.js" project-path="/3.0/docs/samples/name-tag">
   <paper-tab slot="tabs">name-tag.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/name-tag/name-tag.js -->
+<!-- include_file 3.0/docs/samples/name-tag/name-tag.js -->
 ```
 
   </div>
@@ -171,7 +171,7 @@ The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced 
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/name-tag/index.html -->
+<!-- include_file 3.0/docs/samples/name-tag/index.html -->
 ```
 
   </div>
@@ -195,12 +195,12 @@ values, configuring properties from markup, observing property changes, and more
 The following example declares the `owner` property from the last example.
 It also shows configuring the owner property from markup in `index.html`.
 
-<demo-tabs selected="0" name="qt-5-declare-property" editor-open-file="configurable-name-tag.js" project-path="/3.0/start/samples/configurable-name-tag">
+<demo-tabs selected="0" name="qt-5-declare-property" editor-open-file="configurable-name-tag.js" project-path="/3.0/docs/samples/configurable-name-tag">
   <paper-tab slot="tabs">configurable-name-tag.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/configurable-name-tag/configurable-name-tag.js -->
+<!-- include_file 3.0/docs/samples/configurable-name-tag/configurable-name-tag.js -->
 ```
 
   </div>
@@ -208,7 +208,7 @@ It also shows configuring the owner property from markup in `index.html`.
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/configurable-name-tag/index.html -->
+<!-- include_file 3.0/docs/samples/configurable-name-tag/index.html -->
 ```
 
   </div>
@@ -232,12 +232,12 @@ This example uses two-way binding: binding the value of a property on a parent e
 on the child element. When the child element updates the property, the changes are bound to the
 parent element.
 
-<demo-tabs selected="0" name="qt-6-bind-property" editor-open-file="parent-element.js" project-path="/3.0/start/samples/parent-element">
+<demo-tabs selected="0" name="qt-6-bind-property" editor-open-file="parent-element.js" project-path="/3.0/docs/samples/parent-element">
   <paper-tab slot="tabs">parent-element.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/parent-element/parent-element.js --
+<!-- include_file 3.0/docs/samples/parent-element/parent-element.js --
 ```
 
   </div>
@@ -245,7 +245,7 @@ parent element.
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/parent-element/child-element.js --
+<!-- include_file 3.0/docs/samples/parent-element/child-element.js --
 ```
 
   </div>
@@ -253,7 +253,7 @@ parent element.
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/parent-element/index.html --
+<!-- include_file 3.0/docs/samples/parent-element/index.html --
 ```
 
   </div>
@@ -270,12 +270,12 @@ Learn more: Two-way binding</a></p>
 The following example uses two-way binding: binding the value of a custom input element (`iron-input`)
 to the element's `owner` property, so it's updated as the user types.
 
-<demo-tabs selected="0" name="qt-6-bind-property" editor-open-file="editable-name-tag.js" project-path="/3.0/start/samples/editable-name-tag">
+<demo-tabs selected="0" name="qt-6-bind-property" editor-open-file="editable-name-tag.js" project-path="/3.0/docs/samples/editable-name-tag">
   <paper-tab slot="tabs">editable-name-tag.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/editable-name-tag/editable-name-tag.js -->
+<!-- include_file 3.0/docs/samples/editable-name-tag/editable-name-tag.js -->
 ```
 
   </div>
@@ -283,7 +283,7 @@ to the element's `owner` property, so it's updated as the user types.
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/editable-name-tag/index.html -->
+<!-- include_file 3.0/docs/samples/editable-name-tag/index.html -->
 ```
 
   </div>
@@ -303,12 +303,12 @@ Learn more: Two-way binding</a></p>
 
 The template repeater (`<dom-repeat>`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 
-<demo-tabs selected="0" name="qt-7-dom-repeat" editor-open-file="employee-list.js" project-path="/3.0/start/samples/employee-list">
+<demo-tabs selected="0" name="qt-7-dom-repeat" editor-open-file="employee-list.js" project-path="/3.0/docs/samples/employee-list">
   <paper-tab slot="tabs">employee-list.js</paper-tab>
   <div>
 
 ```js
-<!-- include_file 3.0/start/samples/employee-list/employee-list.js -->
+<!-- include_file 3.0/docs/samples/employee-list/employee-list.js -->
 ```
 
   </div>
@@ -316,7 +316,7 @@ The template repeater (`<dom-repeat>`) is a specialized template that binds to a
   <div>
 
 ```html
-<!-- include_file 3.0/start/samples/employee-list/index.html -->
+<!-- include_file 3.0/docs/samples/employee-list/index.html -->
 ```
 
   </div>
