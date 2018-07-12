@@ -316,13 +316,7 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
     ])
     .pipe(gulp.dest('dist/2.0/samples/homepage/google-map'));
 
-  const summit = gulp.src([
-      'app/summit*/**/*',
-      'app/summit*/*',
-    ], {base: 'app'})
-    .pipe(gulp.dest('dist'));
-
-  return merge(app, docs, samples, gae, bower, bundles, demo1, demo2, summit);
+  return merge(app, docs, samples, gae, bower, bundles, demo1, demo2);
 });
 
 gulp.task('watch', 'Watch files for changes', function() {
