@@ -23,4 +23,4 @@ gulp
 
 echo "Deploying app version: $deployVersion"
 gcloud app deploy $APPDIR/../dist/app.yaml \
-    --project polymer-project --version $deployVersion --no-promote
+    --project polymer-library --version $deployVersion --no-promote

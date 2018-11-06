@@ -55,7 +55,7 @@ contain a dash (-)**.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/custom-element/custom-element.html -->
+<!-- include_file 2.0/docs/samples/custom-element/custom-element.html -->
 ```
 
   </div>
@@ -63,7 +63,7 @@ contain a dash (-)**.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/custom-element/index.html -->
+<!-- include_file 2.0/docs/samples/custom-element/index.html -->
 ```
 
   </div>
@@ -99,7 +99,7 @@ You can use Polymer's DOM templating to create a shadow DOM tree for your elemen
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/dom-element/dom-element.html -->
+<!-- include_file 2.0/docs/samples/dom-element/dom-element.html -->
 ```
 
   </div>
@@ -107,7 +107,7 @@ You can use Polymer's DOM templating to create a shadow DOM tree for your elemen
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/dom-element/index.html -->
+<!-- include_file 2.0/docs/samples/dom-element/index.html -->
 ```
 
   </div>
@@ -134,7 +134,7 @@ with a styled `<div>` tag.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/picture-frame/picture-frame.html -->
+<!-- include_file 2.0/docs/samples/picture-frame/picture-frame.html -->
 ```
 
   </div>
@@ -142,7 +142,7 @@ with a styled `<div>` tag.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/picture-frame/index.html -->
+<!-- include_file 2.0/docs/samples/picture-frame/index.html -->
 ```
 
   </div>
@@ -174,7 +174,7 @@ The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced 
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/name-tag/name-tag.html -->
+<!-- include_file 2.0/docs/samples/name-tag/name-tag.html -->
 ```
 
   </div>
@@ -182,7 +182,7 @@ The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced 
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/name-tag/index.html -->
+<!-- include_file 2.0/docs/samples/name-tag/index.html -->
 ```
 
   </div>
@@ -212,7 +212,7 @@ It also shows configuring the owner property from markup in `index.html`.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/configurable-name-tag/configurable-name-tag.html -->
+<!-- include_file 2.0/docs/samples/configurable-name-tag/configurable-name-tag.html -->
 ```
 
   </div>
@@ -220,7 +220,7 @@ It also shows configuring the owner property from markup in `index.html`.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/configurable-name-tag/index.html -->
+<!-- include_file 2.0/docs/samples/configurable-name-tag/index.html -->
 ```
 
   </div>
@@ -247,7 +247,7 @@ to the element's `owner` property, so it's updated as the user types.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/editable-name-tag/editable-name-tag.html -->
+<!-- include_file 2.0/docs/samples/editable-name-tag/editable-name-tag.html -->
 ```
 
   </div>
@@ -255,7 +255,7 @@ to the element's `owner` property, so it's updated as the user types.
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/editable-name-tag/index.html -->
+<!-- include_file 2.0/docs/samples/editable-name-tag/index.html -->
 ```
 
   </div>
@@ -278,7 +278,7 @@ The template repeater (`dom-repeat`) is a specialized template that binds to an 
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/employee-list/employee-list.html -->
+<!-- include_file 2.0/docs/samples/employee-list/employee-list.html -->
 ```
 
   </div>
@@ -286,7 +286,7 @@ The template repeater (`dom-repeat`) is a specialized template that binds to an 
   <div>
 
 ```html
-<!-- include_file 2.0/start/samples/employee-list/index.html -->
+<!-- include_file 2.0/docs/samples/employee-list/index.html -->
 ```
 
   </div>

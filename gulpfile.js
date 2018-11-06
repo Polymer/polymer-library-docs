@@ -286,7 +286,7 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
     .pipe(gulp.dest('dist'));
 
   const samples = gulp.src([
-      'app/3.0/start/samples/**/*',
+      'app/3.0/docs/samples/**/*',
       'app/3.0/samples/**/*',
     ], {base: 'app/'})
     .pipe(gulp.dest('dist'));

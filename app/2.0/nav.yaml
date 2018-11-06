@@ -3,17 +3,17 @@
   shortpath: home
   path: /
 
-- section: Start
-  shortpath: start
-  path: /2.0/start/
+- section: Guides
+  shortpath: docs
+  path: /2.0/docs/devguide/feature-overview
   items:
-  - title: Get started
-    path: /2.0/start/
+  - title: Feature overview
+    path: /2.0/docs/devguide/feature-overview
   - title: Try Polymer
     path: /2.0/start/quick-tour
   - title: Install Polymer 2.x
     path: /2.0/start/install-2-0
-  - header: Build an element
+  - header: "Tutorial: Build an element"
   - title: 1. Get set up
     path: /2.0/start/first-element/intro
     indent: True
@@ -30,27 +30,6 @@
     path: /2.0/start/first-element/step-5
     indent: True
   - endheader: True
-  - header: Build an app
-  - title: 1. Get set up
-    path: /2.0/start/toolbox/set-up
-    indent: True
-  - title: 2. Create a new page
-    path: /2.0/start/toolbox/create-a-page
-    indent: True
-  - title: 3. Add some elements
-    path: /2.0/start/toolbox/add-elements
-    indent: True
-  - title: 4. Deploy
-    path: /2.0/start/toolbox/deploy
-    indent: True
-  - endheader: True
-
-- section: Polymer
-  shortpath: docs
-  path: /2.0/docs/devguide/feature-overview
-  items:
-  - title: Feature overview
-    path: /2.0/docs/devguide/feature-overview
   - header: About this release
   - title: What's new in 2.0
     path: /2.0/docs/about_20
@@ -161,27 +140,9 @@
     path: /2.0/docs/tools/node-support
     indent: True
   - endheader: True
-  - header: Resources
-  - title: Glossary
-    path: /2.0/docs/glossary
-    indent: True
-  - endheader: True
-  - header: API Reference
-  - title: API Reference
-    path: /2.0/docs/api/
-    indent: True
-  - title: Global settings
-    path: /2.0/docs/devguide/settings
-    indent: True
-  - endheader: True
+  - header: Build apps
 
-- section: App Toolbox
-  shortpath: toolbox
-  path: /2.0/toolbox/
-  items:
-  - title: What's in the box?
-    path: /2.0/toolbox/
-  - header: Using the Toolbox
+  - header: Build apps
   - title: App templates
     path: /2.0/toolbox/templates
     indent: True
@@ -212,19 +173,163 @@
     path: /2.0/toolbox/prpl
     indent: True
   - endheader: true
-  - header: Case study
-  - title: "Shop"
-    path: /2.0/toolbox/case-study
-    indent: True
-  - title: "News"
-    path: /2.0/toolbox/news-case-study
-    indent: True
-  - endheader: true
 
-- section: Blog
-  shortpath: blog
-  path: /blog/
+  - header: Resources
+  - title: Glossary
+    path: /2.0/docs/glossary
+    indent: True
+  - title: Global settings
+    path: /2.0/docs/devguide/settings
+    indent: True
+  - endheader: True
 
-- section: Community
-  shortpath: community
-  path: /community/
+- section: API Reference
+  shortpath: api
+  path: /2.0/api/
+  items:
+  - title: index
+    path: /2.0/api/
+  - header: Elements
+  - title: Polymer.ArraySelector
+    path: /2.0/api/elements/Polymer.ArraySelector
+    indent: True 
+  - title: Polymer.CustomStyle
+    path: /2.0/api/elements/Polymer.CustomStyle
+    indent: True 
+  - title: Polymer.DomBind
+    path: /2.0/api/elements/Polymer.DomBind
+    indent: True 
+  - title: Polymer.DomIf
+    path: /2.0/api/elements/Polymer.DomIf
+    indent: True 
+  - title: Polymer.DomModule
+    path: /2.0/api/elements/Polymer.DomModule
+    indent: True 
+  - title: Polymer.DomRepeat
+    path: /2.0/api/elements/Polymer.DomRepeat
+    indent: True 
+  - title: Polymer.Element
+    path: /2.0/api/elements/Polymer.Element
+    indent: True 
+  - endheader: True 
+  - header: Classes
+  - title: Polymer.Debouncer
+    path: /2.0/api/classes/Polymer.Debouncer
+    indent: True 
+  - title: Polymer.DomApi
+    path: /2.0/api/classes/Polymer.DomApi
+    indent: True 
+  - title: Polymer.FlattenedNodesObserver
+    path: /2.0/api/classes/Polymer.FlattenedNodesObserver
+    indent: True 
+  - endheader: True 
+  - header: Mixins
+  - title: Polymer.ArraySelectorMixin
+    path: /2.0/api/mixins/Polymer.ArraySelectorMixin
+    indent: True 
+  - title: Polymer.DirMixin
+    path: /2.0/api/mixins/Polymer.DirMixin
+    indent: True 
+  - title: Polymer.ElementMixin
+    path: /2.0/api/mixins/Polymer.ElementMixin
+    indent: True 
+  - title: Polymer.GestureEventListeners
+    path: /2.0/api/mixins/Polymer.GestureEventListeners
+    indent: True 
+  - title: Polymer.LegacyElementMixin
+    path: /2.0/api/mixins/Polymer.LegacyElementMixin
+    indent: True 
+  - title: Polymer.MutableData
+    path: /2.0/api/mixins/Polymer.MutableData
+    indent: True 
+  - title: Polymer.OptionalMutableData
+    path: /2.0/api/mixins/Polymer.OptionalMutableData
+    indent: True 
+  - title: Polymer.PropertiesChanged
+    path: /2.0/api/mixins/Polymer.PropertiesChanged
+    indent: True 
+  - title: Polymer.PropertiesMixin
+    path: /2.0/api/mixins/Polymer.PropertiesMixin
+    indent: True 
+  - title: Polymer.PropertyAccessors
+    path: /2.0/api/mixins/Polymer.PropertyAccessors
+    indent: True 
+  - title: Polymer.PropertyEffects
+    path: /2.0/api/mixins/Polymer.PropertyEffects
+    indent: True 
+  - title: Polymer.TemplateStamp
+    path: /2.0/api/mixins/Polymer.TemplateStamp
+    indent: True 
+  - endheader: True 
+  - header: Functions
+  - title: Polymer.Class
+    path: /2.0/api/#function-Polymer.Class
+    indent: True 
+  - title: Polymer.dedupingMixin
+    path: /2.0/api/#function-Polymer.dedupingMixin
+    indent: True 
+  - title: Polymer.dom
+    path: /2.0/api/#function-Polymer.dom
+    indent: True 
+  - title: Polymer.enqueueDebouncer
+    path: /2.0/api/#function-Polymer.enqueueDebouncer
+    indent: True 
+  - title: Polymer.flush
+    path: /2.0/api/#function-Polymer.flush
+    indent: True 
+  - title: Polymer.html
+    path: /2.0/api/#function-Polymer.html
+    indent: True 
+  - title: Polymer.htmlLiteral
+    path: /2.0/api/#function-Polymer.htmlLiteral
+    indent: True 
+  - title: Polymer.importHref
+    path: /2.0/api/#function-Polymer.importHref
+    indent: True 
+  - title: Polymer.mixinBehaviors
+    path: /2.0/api/#function-Polymer.mixinBehaviors
+    indent: True 
+  - title: Polymer.setPassiveTouchGestures
+    path: /2.0/api/#function-Polymer.setPassiveTouchGestures
+    indent: True 
+  - title: Polymer.setRootPath
+    path: /2.0/api/#function-Polymer.setRootPath
+    indent: True 
+  - title: Polymer.setSanitizeDOMValue
+    path: /2.0/api/#function-Polymer.setSanitizeDOMValue
+    indent: True 
+  - endheader: True 
+  - header: Namespaces
+  - title: Polymer.ArraySplice
+    path: /2.0/api/namespaces/Polymer.ArraySplice
+    indent: True 
+  - title: Polymer.Async
+    path: /2.0/api/namespaces/Polymer.Async
+    indent: True 
+  - title: Polymer.CaseMap
+    path: /2.0/api/namespaces/Polymer.CaseMap
+    indent: True 
+  - title: Polymer.dom
+    path: /2.0/api/namespaces/Polymer.dom
+    indent: True 
+  - title: Polymer.Gestures
+    path: /2.0/api/namespaces/Polymer.Gestures
+    indent: True 
+  - title: Polymer.Path
+    path: /2.0/api/namespaces/Polymer.Path
+    indent: True 
+  - title: Polymer.RenderStatus
+    path: /2.0/api/namespaces/Polymer.RenderStatus
+    indent: True 
+  - title: Polymer.ResolveUrl
+    path: /2.0/api/namespaces/Polymer.ResolveUrl
+    indent: True 
+  - title: Polymer.Settings
+    path: /2.0/api/namespaces/Polymer.Settings
+    indent: True 
+  - title: Polymer.StyleGather
+    path: /2.0/api/namespaces/Polymer.StyleGather
+    indent: True 
+  - title: Polymer.telemetry
+    path: /2.0/api/namespaces/Polymer.telemetry
+    indent: True 
