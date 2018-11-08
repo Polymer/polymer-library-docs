@@ -1,6 +1,6 @@
 ## Polymer documentation site
 
-https://www.polymer-project.org/
+https://library.polymer-project.org/
 
 ### Install
 
