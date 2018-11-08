@@ -141,37 +141,42 @@
     indent: True
   - endheader: True
   - header: Build apps
-
-  - header: Build apps
+  - title: Overview
+    path: /2.0/docs/apps/
+    indent: True 
   - title: App templates
-    path: /2.0/toolbox/templates
+    path: /2.0/docs/apps/templates
     indent: True
   - title: Responsive app layout
-    path: /2.0/toolbox/app-layout
+    path: /2.0/docs/apps/app-layout
     indent: True
   - title: Routing
-    path: /2.0/toolbox/routing
+    path: /2.0/docs/apps/routing
     indent: True
   - title: Localization
-    path: /2.0/toolbox/localize
+    path: /2.0/docs/apps/localize
     indent: True
   - title: App storage
-    path: /2.0/toolbox/app-storage
+    path: /2.0/docs/apps/app-storage
     indent: True
   - title: Service worker
-    path: /2.0/toolbox/service-worker
+    path: /2.0/docs/apps/service-worker
     indent: True
-  - endheader: true
-  - header: Deploy
   - title: Build for production
-    path: /2.0/toolbox/build-for-production
+    path: /2.0/docs/apps/build-for-production
     indent: True
   - title: Serve your app
-    path: /2.0/toolbox/serve
+    path: /2.0/docs/apps/serve
     indent: True
   - title: The PRPL pattern
-    path: /2.0/toolbox/prpl
+    path: /2.0/docs/apps/prpl
     indent: True
+  - title: Shop App Case Study
+    path: /2.0/docs/apps/case-study.md
+    indent: True 
+  - title: News App Case Study
+    path: /2.0/docs/apps/news-case-study.md
+    indent: True 
   - endheader: true
 
   - header: Resources

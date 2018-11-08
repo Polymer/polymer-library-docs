@@ -225,10 +225,7 @@ Shop uses the `sw-precache` [library](https://github.com/GoogleChrome/sw-precach
 for offline support. This library takes a list of files to cache and generates
 a service worker at build time, so you don't need to write your own service
 worker code. Just create a list of the essential resources and add the precache
-script to your build process. The [Polymer CLI](https://github.com/polymer/polymer-cli)
-supports [this use-case using sw-precache for generating a service
-worker](https://github.com/polymer/polymer-cli#app-shell-structure) to cache
-the dependencies for your application's "shell".
+script to your build process. 
 
 ## Application layout using app-layout
 

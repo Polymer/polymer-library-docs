@@ -3,45 +3,7 @@
   shortpath: home
   path: /
 
-- section: Start
-  shortpath: start
-  path: /1.0/start/
-  items:
-  - title: Get started
-    path: /1.0/start/
-  - header: Build an element
-  - title: 1. Get set up
-    path: /1.0/start/first-element/intro
-    indent: True
-  - title: 2. Add local DOM
-    path: /1.0/start/first-element/step-2
-    indent: True
-  - title: 3. Data binding & properties
-    path: /1.0/start/first-element/step-3
-    indent: True
-  - title: 4. React to input
-    path: /1.0/start/first-element/step-4
-    indent: True
-  - title: 5. Theming with custom properties
-    path: /1.0/start/first-element/step-5
-    indent: True
-  - endheader: True
-  - header: Build an app
-  - title: 1. Get set up
-    path: /1.0/start/toolbox/set-up
-    indent: True
-  - title: 2. Create a new page
-    path: /1.0/start/toolbox/create-a-page
-    indent: True
-  - title: 3. Add some elements
-    path: /1.0/start/toolbox/add-elements
-    indent: True
-  - title: 4. Deploy
-    path: /1.0/start/toolbox/deploy
-    indent: True
-  - endheader: True
-
-- section: Polymer
+- section: Guides
   shortpath: docs
   path: /1.0/docs/devguide/feature-overview
   items:
@@ -49,6 +11,23 @@
     path: /1.0/docs/devguide/feature-overview
   - title: Try Polymer
     path: /1.0/docs/devguide/quick-tour
+  - header: "Tutorial: Build an element"
+  - title: 1. Get set up
+    path: /1.0/docs/first-element/intro
+    indent: True
+  - title: 2. Add local DOM
+    path: /1.0/docs/first-element/step-2
+    indent: True
+  - title: 3. Data binding & properties
+    path: /1.0/docs/first-element/step-3
+    indent: True
+  - title: 4. React to input
+    path: /1.0/docs/first-element/step-4
+    indent: True
+  - title: 5. Theming with custom properties
+    path: /1.0/docs/first-element/step-5
+    indent: True
+  - endheader: True
   - header: Define elements
   - title: Register an element
     path: /1.0/docs/devguide/registering-elements
@@ -133,7 +112,36 @@
     path: /1.0/docs/about_10
     indent: True
   - endheader: True
+  - header: Build apps
+  - title: Overview
+    path: /1.0/docs/apps/
+    indent: True 
+  - title: App templates
+    path: /1.0/docs/apps/templates
+    indent: True
+  - title: Responsive app layout
+    path: /1.0/docs/apps/app-layout
+    indent: True
+  - title: Routing
+    path: /1.0/docs/apps/routing
+    indent: True
+  - title: Localization
+    path: /1.0/docs/apps/localize
+    indent: True
+  - title: App storage
+    path: /1.0/docs/apps/app-storage
+    indent: True
+  - title: Service worker
+    path: /1.0/docs/apps/service-worker
+    indent: True
+  - title: Serve your app
+    path: /1.0/docs/apps/server
+    indent: True
+  - endheader: true
   - header: Resources
+  - title: Global settings
+    path: /1.0/docs/devguide/settings
+    indent: True
   - title: Community
     path: /community/
     indent: True
@@ -141,78 +149,34 @@
     path: /1.0/docs/browsers
     indent: True
   - endheader: True
+
+- section: API
+  shortpath: api
+  path: /1.0/api/classes/Polymer.Base
+  items:
   - header: API Reference
   - title: Polymer.Base
-    path: /1.0/docs/api/classes/Polymer.Base
+    path: /1.0/api/classes/Polymer.Base
     indent: True
   - title: array-selector
-    path: /1.0/docs/api/elements/array-selector
+    path: /1.0/api/elements/array-selector
     indent: True
   - title: custom-style
-    path: /1.0/docs/api/elements/custom-style
+    path: /1.0/api/elements/custom-style
     indent: True
   - title: dom-bind
-    path: /1.0/docs/api/elements/dom-bind
+    path: /1.0/api/elements/dom-bind
     indent: True
   - title: dom-if
-    path: /1.0/docs/api/elements/dom-if
+    path: /1.0/api/elements/dom-if
     indent: True
   - title: dom-repeat
-    path: /1.0/docs/api/elements/dom-repeat
+    path: /1.0/api/elements/dom-repeat
     indent: True
   - title: dom-template
-    path: /1.0/docs/api/elements/dom-template
+    path: /1.0/api/elements/dom-template
     indent: True
   - title: Polymer.Templatizer
-    path: /1.0/docs/api/behaviors/Polymer.Templatizer
+    path: /1.0/api/behaviors/Polymer.Templatizer
     indent: True
-  - title: Global settings
-    path: /1.0/docs/devguide/settings
-    indent: True
-  - endheader: True
-
-- section: App Toolbox
-  shortpath: toolbox
-  path: /1.0/toolbox/
-  items:
-  - title: What's in the box?
-    path: /1.0/toolbox/
-  - header: Using the Toolbox
-  - title: App templates
-    path: /1.0/toolbox/templates
-    indent: True
-  - title: Responsive app layout
-    path: /1.0/toolbox/app-layout
-    indent: True
-  - title: Routing
-    path: /1.0/toolbox/routing
-    indent: True
-  - title: Localization
-    path: /1.0/toolbox/localize
-    indent: True
-  - title: App storage
-    path: /1.0/toolbox/app-storage
-    indent: True
-  - title: Service worker
-    path: /1.0/toolbox/service-worker
-    indent: True
-  - title: Serve your app
-    path: /1.0/toolbox/server
-    indent: True
-  - endheader: true
-  - header: Case study
-  - title: "Shop"
-    path: /1.0/toolbox/case-study
-    indent: True
-  - title: "News"
-    path: /1.0/toolbox/news-case-study
-    indent: True
-  - endheader: true
-
-- section: Blog
-  shortpath: blog
-  path: /blog/
-
-- section: Community
-  shortpath: community
-  path: /community/
+  - endheader: True 

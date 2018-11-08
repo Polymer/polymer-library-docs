@@ -168,9 +168,6 @@ elements on the page:
 Ready to get started on your own element? You can use the Polymer CLI to
 [Create an element project](/1.0/docs/tools/polymer-cli#element).
 
-You can also see the [Build an app](/1.0/start/toolbox/set-up)
-tutorial to get started on an app using the Polymer App Toolbox.
-
 Or review the previous section:
 
 <a class="blue-button" href="step-4">

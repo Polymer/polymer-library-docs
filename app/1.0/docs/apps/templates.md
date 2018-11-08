@@ -70,5 +70,3 @@ discussed in the rest of the Polymer App Toolbox documentation according
 to the needs of your application, as well as from other sources such as the
 [Polymer Element Catalog](https://elements.polymer-project.org/).
 
-See the section on [Building your first Polymer application](../start/toolbox/set-up)
-for a tutorial on getting started with one of the App Toolbox templates.
