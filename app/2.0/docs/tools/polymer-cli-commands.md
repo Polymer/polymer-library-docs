@@ -25,7 +25,7 @@ noted.
 Generates a production-ready build of your app. This process includes minifying the HTML, CSS, and
 JS of the application dependencies, and generating a service worker to pre-cache dependencies.
 
-Polymer CLI's build process is designed for apps that follow the [PRPL pattern](/{{{polymer_version_dir}}}/toolbox/prpl). 
+Polymer CLI's build process is designed for apps that follow the [PRPL pattern](/{{{polymer_version_dir}}}/docs/apps/prpl). 
 
 To make sure your app builds properly, create a `polymer.json` file 
 at the top-level of your project and store your build configurations there. [See the polymer.json
@@ -145,7 +145,7 @@ Create an unbundled build for browsers that support ES6:
 
 ## polymer init {#init}
 
-Initializes a Polymer project from one of several templates. Pre-bundled templates range from just bare-bones to fully featured applications like the [Polymer Shop app](/{{{polymer_version_dir}}}/toolbox/case-study).
+Initializes a Polymer project from one of several templates. Pre-bundled templates range from just bare-bones to fully featured applications like the [Polymer Shop app](/{{{polymer_version_dir}}}/docs/apps/case-study).
 
 Run `polymer init` to choose a template from a list of all installed templates. Or, if you know the template name before hand, you can provide it as a command argument to select it automatically.
 
@@ -155,7 +155,6 @@ See also:
 
 * [Create an element project with the Polymer CLI](create-element-polymer-cli)
 * [Create an application project with the Polymer CLI](create-app-polymer-cli)
-* [Case study of the Polymer Shop app](/{{{polymer_version_dir}}}/toolbox/case-study)
 
 ## polymer install {#install}
 

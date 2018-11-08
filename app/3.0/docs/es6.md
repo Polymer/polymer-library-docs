@@ -19,7 +19,7 @@ To deploy your code, you can either transform it for the lowest common denomniat
 transformed to AMD modules), or serve multiple versions of the code to different browsers.
 
 Information on multiple builds and differential serving is available in the
-[documentation on building for production](/{{{polymer_version_dir}}}/toolbox/build-for-production).
+[documentation on building for production](/{{{polymer_version_dir}}}/docs/apps/build-for-production).
 
 ## JavaScript (ES6) Modules
 

@@ -191,11 +191,11 @@ elements on the page:
 
 For more information, see the documentation on [custom CSS properties](https://www.polymer-project.org/2.0/docs/devguide/custom-css-properties).
 
-Ready to get started on your own element? You can use the Polymer CLI to
-[Create an element project](/2.0/docs/tools/polymer-cli#element).
+*   Ready to get started on your own element? You can use the Polymer CLI to
+    [Create an element project](/{{{polymer_version_dir}}}/docs/tools/polymer-cli#element).
 
-You can also see the [Build an app](/2.0/start/toolbox/set-up)
-tutorial to get started on an app using the Polymer App Toolbox.
+*   You can also [Create an application project](/{{{polymer_version_dir}}}/docs/tools/create-app-polymer-cli)
+    to get started building an application with the Polymer library.
 
 Or review the previous section:
 

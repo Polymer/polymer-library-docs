@@ -336,4 +336,8 @@ Learn more: Template repeater</a></p>
 
 ## Next steps
 
-Now that you understand these fundamental Polymer concepts, you can [build an app with App Toolbox](/3.0/start/toolbox/set-up) or see a [feature overview of the Polymer library](/3.0/docs/devguide/feature-overview).
+Now that you understand these fundamental Polymer concepts:
+
+-   Explore more with the [Build an element tutorial](first-element/intro).
+-   Or [Install Polymer 3.x](install-3-0) to get started with a new project.
+

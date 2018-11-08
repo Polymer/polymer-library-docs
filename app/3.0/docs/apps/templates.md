@@ -4,7 +4,7 @@ title: Application templates
 
 <!-- toc -->
 
-You can get started with the Polymer App Toolbox using one of several templates
+You can get started with a Polymer application using one of several templates
 that incorporate the elements and patterns discussed here using the Polymer CLI.
 
 ## Initialize project from template
@@ -35,7 +35,7 @@ maximum flexibility.
 
 ![](/images/3.0/toolbox/starter-kit.png)
 
-The `polymer-3-starter-kit` introduces the [`app-layout`](app-layout) elements,
+The `polymer-3-starter-kit` introduces the [`app-layout`](https://polymerelements.github.io/app-layout/) elements,
 and composes them in a common left-hand drawer arrangement with a toolbar.
 The template provides navigation between a series of views that load and
 are rendered in the main content area.
@@ -47,9 +47,7 @@ and will be pre-cached for offline and subsequent use.
 ## Where to go from here
 
 The templates are starting points, and you are free to add web components
-discussed in the rest of the Polymer App Toolbox documentation according
+discussed in the rest of the Build apps section according
 to the needs of your application, as well as from other sources such as the
 [WebComponents.org](https://www.webcomponents.org/).
 
-See the section on [Building your first Polymer application](/{{{polymer_version_dir}}}/start/toolbox/set-up)
-for a tutorial on getting started with one of the App Toolbox templates.

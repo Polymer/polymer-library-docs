@@ -134,6 +134,8 @@
     indent: True
   - endheader: True
   - header: Build apps
+  - title: Overview
+    path: /3.0/docs/apps/
   - title: App templates
     path: /3.0/docs/apps/templates
     indent: True

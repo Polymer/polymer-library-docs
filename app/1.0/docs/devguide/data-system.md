@@ -346,7 +346,7 @@ maintains path linkages between an array and a selected item from that array. (`
 also works when selecting multiple items from an array.)
 
 For other use cases, there's an imperative method,
-[`linkPaths`](/1.0/docs/api/Polymer.Base#method-linkPaths) to associate two paths. When two paths
+[`linkPaths`](/1.0/api/classes/Polymer.Base#method-linkPaths) to associate two paths. When two paths
 are *linked*, an [observable change](#observable-changes) to one path is observable on the other
 path, as well.
 

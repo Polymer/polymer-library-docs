@@ -58,6 +58,3 @@ The templates are starting points, and you are free to add web components
 discussed in the rest of the Polymer App Toolbox documentation according
 to the needs of your application, as well as from other sources such as the
 [WebComponents.org](https://www.webcomponents.org/).
-
-See the section on [Building your first Polymer application](../start/toolbox/set-up)
-for a tutorial on getting started with one of the App Toolbox templates.

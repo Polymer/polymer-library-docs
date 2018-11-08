@@ -9,10 +9,10 @@ The `polymer-3-application` template is the most basic starting point for a Poly
 application. Other templates introduce more complex layout and application patterns.
 
 This chapter teaches you more about the `polymer-3-application` template.  
-See [Polymer App Toolbox templates](/{{{polymer_version_dir}}}/toolbox/templates) for more details on other templates.
+See [Application templates](/{{{polymer_version_dir}}}/docs/apps/templates) for more details on other templates.
 
 For a more full-featured progressive web app template, you can use the starter kit template 
-(`polymer-3-starter-kit`). See [the Polymer Starter Kit tutorial](/{{{polymer_version_dir}}}/start/toolbox/set-up) for setup instructions.
+(`polymer-3-starter-kit`). See [the Polymer Starter Kit tutorial](/{{{polymer_version_dir}}}/docs/toolbox/set-up) for setup instructions.
 
 ## Set up basic app project {#basic-app}
 
@@ -119,4 +119,4 @@ Import your dependencies using module specifiers:
     (e.g. `https://unpkg.com/thing@1.0.1/index.js`). Polymer CLI doesn't rewrite these
     specifiers.
 
-See [Build for production](/{{{polymer_version_dir}}}/toolbox/build-for-production#transforms) for more information on how Polymer CLI resolves imports.
+See [Build for production](/{{{polymer_version_dir}}}/docs/apps/build-for-production#transforms) for more information on how Polymer CLI resolves imports.

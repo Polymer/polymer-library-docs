@@ -61,7 +61,7 @@ The main considerations for the entrypoint are:
 -   Conditionally loads required polyfills.
 -   Uses absolute paths for all dependencies.
 
-When you generate an App Toolbox project using Polymer CLI, the new project contains an entrypoint
+When you generate a Polymer Starter Kit project using Polymer CLI, the new project contains an entrypoint
 `index.html`. For most projects, you shouldn't need to update this file.
 
 ### App shell

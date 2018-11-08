@@ -6,9 +6,8 @@ title: Install Polymer 2.x
 
 If you're familiar with Polymer and just want to get started with the new release, you're in the right place! If you'd like an introduction to the Polymer project and web components:
 
-* [Take a quick tour of Polymer](/{{{polymer_version_dir}}}/start/quick-tour)
-* [Learn how to build your first Polymer app](/{{{polymer_version_dir}}}/start/toolbox/set-up)
-* [Learn how to build your first element with the Polymer library](/{{{polymer_version_dir}}}/start/first-element/intro)
+* [Take a quick tour of Polymer](/{{{polymer_version_dir}}}/docs/quick-tour)
+* [Learn how to build your first element with the Polymer library](/{{{polymer_version_dir}}}/docs/first-element/intro)
 
 Polymer is distributed via the [Bower package manager](https://bower.io/).
 
@@ -83,5 +82,5 @@ The Polymer CLI requires Node.js, npm, Git and Bower. For full installation inst
     polymer serve
     ```
 
-For information on building your project for production, see the documentation on [building Polymer applications for production](../toolbox/build-for-production).
+For information on building your project for production, see the documentation on [building Polymer applications for production]({{{polymer_version_dir}}}/docs/apps/build-for-production).
 
