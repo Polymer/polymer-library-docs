@@ -339,5 +339,5 @@ Learn more: Template repeater</a></p>
 Now that you understand these fundamental Polymer concepts:
 
 -   Explore more with the [Build an element tutorial](first-element/intro).
--   Or [Install Polymer 3.x](install-3-0) to get started with a new project.
+-   Or [Install Polymer 3.x](install-3-0) to get started on a new project.
 
