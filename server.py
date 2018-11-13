@@ -47,7 +47,7 @@ NAV_FILE = '%s/nav.yaml'
 IS_DEV = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 
 # base path for edit-on-github links
-BASE_EDIT_PATH = "https://github.com/Polymer/docs/edit/master/app/%s.md"
+BASE_EDIT_PATH = "https://github.com/Polymer/polymer-library-docs/edit/master/app/%s.md"
 
 def render(out, template, data={}):
   try:
@@ -215,7 +215,7 @@ class Site(webapp2.RequestHandler):
         'section_nav': self.get_section_nav(version, shortpath),
         'path': '/' + path,
         # API docs are not editable in GH.
-        'edit_on_github': path.find('.0/docs/api/') == -1,
+        'edit_on_github': path.find('.0/api/') == -1,
         'edit_on_github_path': BASE_EDIT_PATH % edit_on_github_path,
         'versioned_paths': self.get_versioned_paths(shortpath),
         # we use this as a macro in cross-references.
