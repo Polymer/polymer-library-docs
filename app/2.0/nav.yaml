@@ -338,3 +338,4 @@
   - title: Polymer.telemetry
     path: /2.0/api/namespaces/Polymer.telemetry
     indent: True 
+  - endheader: True 

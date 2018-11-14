@@ -85,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this.v1PageLink;
       // Don't bother updating activeDocsVersion, since this element will be destroyed once navigation completes.
       // this.activeDocsVersion = newSelection;
-      if (!path) path = '/' + newSelection + '/start/';
+      if (!path) path = '/' + newSelection + '/docs/devguide/feature-overview';
 
       window.history.pushState({}, '', window.location.origin + path);
       this.fire('location-changed', {}, {node: window});
