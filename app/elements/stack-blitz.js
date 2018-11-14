@@ -167,8 +167,10 @@ class StackBlitz extends PolymerElement {
                 dependencies: json.dependencies,
                 template: this.projectTemplate,
                 settings: {
-                  action: 'refresh',
-                },
+                  compile: {
+                    action: 'refresh'
+                  }
+                }
               };
 
               const embedOptions = {
