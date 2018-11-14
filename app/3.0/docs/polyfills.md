@@ -31,7 +31,7 @@ There are a couple of other related polyfill files that you may need:
 *   `custom-elements-es5-adapter.js`. This small polyfill allows you to run compiled, ES5 elements
     on browsers that support native custom elements. This is useful in static serving environments
     where you need to serve a single app version to all browsers. The adapter is discussed in more
-    detail in [ES6](es6) and in [Build for production](/{{{polymer_version_dir}}}/toolbox/build-for-production).
+    detail in [ES6](es6) and in [Build for production](/{{{polymer_version_dir}}}/docs/apps/build-for-production).
     Important note: the es5 adapter must come _before_ the webcomponents polyfills, if any.
 *   `apply-shim.js`. A polyfill for CSS mixins. Unlike the other polyfills, it should be imported
     by any component that defines or applies CSS mixins. For details, see
@@ -84,7 +84,7 @@ The following table lists the JavaScript snippets and query parameters for each 
 JavaScript:
 
 ```js
-window.customElements && window.customElements.forcePolyfill = true;
+if (window.customElements) window.customElements.forcePolyfill = true;
 ```
 
 Query parameter:

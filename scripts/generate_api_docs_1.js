@@ -24,7 +24,7 @@ const {exec} = require('child_process');
 const escape = require('html-escape');
 const path = require('path');
 
-const apiDocsPath = '../app/1.0/docs/api/';
+const apiDocsPath = '../app/1.0/api/';
 const rootNamespace = 'Polymer';
 
 // TODO: Check out an actual release SHA to generate docs off of.

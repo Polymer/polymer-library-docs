@@ -41,7 +41,7 @@ There are a few special types of path segments.
 
 ## Get a value by path {#get-value}
 
-Use the [`get`](/1.0/docs/api/Polymer.Base#method-get) method to retrieve a value based on
+Use the [`get`](/1.0/api/classes/Polymer.Base#method-get) method to retrieve a value based on
 its path.
 
 ```
@@ -54,7 +54,7 @@ var item = this.get(['myArray', 11])
 
 ## Set a property or subproperty by path {#set-path}
 
-Use the [`set`](/1.0/docs/api/Polymer.Base#method-set) method to make an [observable
+Use the [`set`](/1.0/api/classes/Polymer.Base#method-set) method to make an [observable
 change](data-system#observable-changes) to a subproperty.
 
 ```
@@ -187,7 +187,7 @@ Example: { .caption }
 Whenever possible you should always use Polymer's [array mutation methods](#array-mutation).
 However, this isn't always possible. For example, you may be using a third-party library
 that does not use Polymer's array mutation methods. In these scenarios you can call
-<a href="/1.0/docs/api/Polymer.Base#method-notifySplices">`notifySplices`</a>
+<a href="/1.0/api/classes/Polymer.Base#method-notifySplices">`notifySplices`</a>
 after each mutation to ensure that any Polymer elements observing the array
 are properly notified of the changes.
 
@@ -265,7 +265,7 @@ If the property is a large array or a complicated object, this process may be ex
 
 ## Link two paths to the same object {#linkpaths}
 
-Use the [`linkPaths`](/1.0/docs/api/Polymer.Base#method-linkPaths) method to associate two paths.
+Use the [`linkPaths`](/1.0/api/classes/Polymer.Base#method-linkPaths) method to associate two paths.
 Use `linkPaths` when an element has two paths that refer to the same object, as described in
 [Two paths referencing the same object](data-system#two-paths).
 

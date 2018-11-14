@@ -59,7 +59,7 @@ class StackBlitz extends PolymerElement {
        * REQUIRED: absolute path to the project directory
        *
        * e.g. /3.0/start/samples/custom-element
-       *     or /2.0/start/samples/employee-list
+       *     or /2.0/docs/samples/employee-list
        */
       projectPath: {
         type: String,

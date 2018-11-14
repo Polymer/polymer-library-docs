@@ -50,7 +50,7 @@ async function exec(command) {
   return result;
 }
 
-const apiDocsPath = '../app/3.0/docs/api/';
+const apiDocsPath = '../app/3.0/api/';
 const rootNamespace = 'Polymer';
 
 // TODO: Change to master once 3.x is merged into master.

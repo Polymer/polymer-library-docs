@@ -73,5 +73,5 @@ You can also use the following editors, but the code only runs on browsers that 
 
 You can also save [this HTML file](https://gist.githubusercontent.com/kevinpschaaf/8a5acbea7b25d2bb5e82eeea2b105669/raw/c3a86872f07603e2d0ddae736687e52a5c8c499f/index.html) to a local file and run it in any browser that supports ES6 modules.</span></span>
 
-See [Try Polymer](/3.0/start/quick-tour) to try out some of Polymer's features.
-Once you're ready to try out Polymer 3.0 in a project, you can install it using npm. See [Install 3.0](/3.0/start/install-3-0) for details.</span>
+See [Try Polymer](/3.0/docs/quick-tour) to try out some of Polymer's features.
+Once you're ready to try out Polymer 3.0 in a project, you can install it using npm. See [Install 3.0](/3.0/docs/install-3-0) for details.</span>

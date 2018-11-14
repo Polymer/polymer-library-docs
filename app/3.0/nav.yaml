@@ -3,54 +3,33 @@
   shortpath: home
   path: /
 
-- section: Start
-  shortpath: start
-  path: /3.0/start/
-  items:
-  - title: Get started
-    path: /3.0/start/
-  - title: Try Polymer
-    path: /3.0/start/quick-tour
-  - title: Install Polymer 3.x
-    path: /3.0/start/install-3-0
-  - header: Build an element
-  - title: 1. Get set up
-    path: /3.0/start/first-element/intro
-    indent: True
-  - title: 2. Add local DOM
-    path: /3.0/start/first-element/step-2
-    indent: True
-  - title: 3. Data binding & properties
-    path: /3.0/start/first-element/step-3
-    indent: True
-  - title: 4. React to input
-    path: /3.0/start/first-element/step-4
-    indent: True
-  - title: 5. Theming with custom properties
-    path: /3.0/start/first-element/step-5
-    indent: True
-  - endheader: True
-  - header: Build an app
-  - title: 1. Get set up
-    path: /3.0/start/toolbox/set-up
-    indent: True
-  - title: 2. Create a new page
-    path: /3.0/start/toolbox/create-a-page
-    indent: True
-  - title: 3. Add some elements
-    path: /3.0/start/toolbox/add-elements
-    indent: True
-  - title: 4. Deploy
-    path: /3.0/start/toolbox/deploy
-    indent: True
-  - endheader: True
-
-- section: Polymer
+- section: Guides
   shortpath: docs
   path: /3.0/docs/devguide/feature-overview
   items:
   - title: Feature overview
     path: /3.0/docs/devguide/feature-overview
+  - title: Try Polymer
+    path: /3.0/docs/quick-tour
+  - title: Install Polymer 3.x
+    path: /3.0/docs/install-3-0
+  - header: "Tutorial: Build an element"
+  - title: 1. Get set up
+    path: /3.0/docs/first-element/intro
+    indent: True
+  - title: 2. Add shadow DOM
+    path: /3.0/docs/first-element/step-2
+    indent: True
+  - title: 3. Data binding & properties
+    path: /3.0/docs/first-element/step-3
+    indent: True
+  - title: 4. React to input
+    path: /3.0/docs/first-element/step-4
+    indent: True
+  - title: 5. Theming with custom properties
+    path: /3.0/docs/first-element/step-5
+    indent: True
+  - endheader: True
   - header: About this release
   - title: What's new in 3.0
     path: /3.0/docs/about_30
@@ -154,70 +133,159 @@
     path: /3.0/docs/tools/node-support
     indent: True
   - endheader: True
-  - header: Resources
+  - header: Build apps
+  - title: Overview
+    path: /3.0/docs/apps/
+  - title: App templates
+    path: /3.0/docs/apps/templates
+    indent: True
+  - title: Build for production
+    path: /3.0/docs/apps/build-for-production
+    indent: True
+  - title: Serve your app
+    path: /3.0/docs/apps/serve
+    indent: True
+  - title: The PRPL pattern
+    path: /3.0/docs/apps/prpl
+    indent: True
+  - title: Service worker
+    path: /3.0/docs/apps/service-worker
+    indent: True
+  - endheader: true
+
+  - header: Reference
   - title: Glossary
     path: /3.0/docs/glossary
-    indent: True
-  - endheader: True
-  - header: API Reference
-  - title: API Reference
-    path: /3.0/docs/api/
     indent: True
   - title: Global settings
     path: /3.0/docs/devguide/settings
     indent: True
   - endheader: True
 
-- section: App Toolbox
-  shortpath: toolbox
-  path: /3.0/toolbox/
+- section: API Reference
+  shortpath: api
+  path: /3.0/api/
   items:
-  - title: What's in the box?
-    path: /3.0/toolbox/
-  - header: Using the Toolbox
-  - title: App templates
-    path: /3.0/toolbox/templates
+  - title: index
+    path: /3.0/api/
+  - title: polymer-element.js
+    path: /3.0/api/polymer-element
+  - header: Elements
+  - title: array-selector.js
+    path: /3.0/api/elements/array-selector
     indent: True
-  - title: Responsive app layout
-    path: /3.0/toolbox/app-layout
+  - title: custom-style.js
+    path: /3.0/api/elements/custom-style
     indent: True
-  - title: Routing
-    path: /3.0/toolbox/routing
+  - title: dom-bind.js
+    path: /3.0/api/elements/dom-bind
     indent: True
-  - title: Localization
-    path: /3.0/toolbox/localize
+  - title: dom-if.js
+    path: /3.0/api/elements/dom-bind
     indent: True
-  - title: App storage
-    path: /3.0/toolbox/app-storage
+  - title: dom-module.js
+    path: /3.0/api/elements/dom-module
     indent: True
-  - title: Service worker
-    path: /3.0/toolbox/service-worker
-    indent: True
-  - endheader: true
-  - header: Deploy
-  - title: Build for production
-    path: /3.0/toolbox/build-for-production
-    indent: True
-  - title: Serve your app
-    path: /3.0/toolbox/serve
-    indent: True
-  - title: The PRPL pattern
-    path: /3.0/toolbox/prpl
+  - title: dom-repeat.js
+    path: /3.0/api/elements/dom-repeat
     indent: True
   - endheader: true
-  - header: Case studies
-  - title: "Shop"
-    path: /3.0/toolbox/case-study
+  - header: Mixins
+  - title: dir-mixin.js
+    path: /3.0/api/mixins/dir-mixin
     indent: True
-  - title: "News"
-    path: /3.0/toolbox/news-case-study
+  - title: disable-upgrade-mixin.js
+    path: /3.0/api/mixins/disable-upgrade-mixin
     indent: True
-  - endheader: true
-
-- section: Blog
-  shortpath: blog
-  path: /blog/
-
-- section: Community
-  shortpath: community
-  path: /community/
+  - title: element-mixin.js
+    path: /3.0/api/mixins/element-mixin
+    indent: True
+  - title: gesture-event-listeners.js
+    path: /3.0/api/mixins/gesture-event-listeners
+    indent: True
+  - title: mutable-data.js
+    path: /3.0/api/mixins/mutable-data
+    indent: True
+  - title: properties-changed.js
+    path: /3.0/api/mixins/properties-changed
+    indent: True
+  - title: properties-mixin.js
+    path: /3.0/api/mixins/properties-mixin
+    indent: True
+  - title: property-accessors.js
+    path: /3.0/api/mixins/property-accessors
+    indent: True
+  - title: property-effects.js
+    path: /3.0/api/mixins/property-effects
+    indent: True
+  - title: strict-binding-parser.js
+    path: /3.0/api/mixins/strict-binding-parser
+    indent: True
+  - title: template-stamp.js
+    path: /3.0/api/mixins/template-stamp
+    indent: True
+  - endheader: True
+  - header: Utils
+  - title: array-splice.js
+    path: /3.0/api/utils/array-splice
+    indent: True
+  - title: case-map.js
+    path: /3.0/api/utils/case-map
+    indent: True
+  - title: debounce.js
+    path: /3.0/api/utils/debounce
+    indent: True
+  - title: flattened-nodes-observer.js
+    path: /3.0/api/utils/flattened-nodes-observer
+    indent: True
+  - title: flush.js
+    path: /3.0/api/utils/flush
+    indent: True
+  - title: gestures.js
+    path: /3.0/api/utils/gestures
+    indent: True
+  - title: html-tag.js
+    path: /3.0/api/utils/html-tag
+    indent: True
+  - title: mixin.js
+    path: /3.0/api/utils/mixin
+    indent: True
+  - title: path.js
+    path: /3.0/api/utils/path
+    indent: True
+  - title: render-status.js
+    path: /3.0/api/utils/render-status
+    indent: True
+  - title: resolve-url.js
+    path: /3.0/api/utils/resolve-url
+    indent: True
+  - title: settings.js
+    path: /3.0/api/utils/settings
+    indent: True
+  - title: style-gather.js
+    path: /3.0/api/utils/style-gather
+    indent: True
+  - title: templatize.js
+    path: /3.0/api/utils/templatize
+    indent: True
+  - endheader: True
+  - header: Legacy
+  - title: class.js
+    path: /3.0/api/legacy/class
+    indent: True
+  - title: legacy-element-mixin.js
+    path: /3.0/api/legacy/legacy-element-mixin
+    indent: True
+  - title: mutable-data-behavior.js
+    path: /3.0/api/legacy/mutable-data-behavior
+    indent: True
+  - title: polymer-fn.js
+    path: /3.0/api/legacy/polymer-fn
+    indent: True
+  - title: polymer.dom.js
+    path: /3.0/api/legacy/polymer.dom
+    indent: True
+  - title: templatizer-behavior.js
+    path: /3.0/api/legacy/templatizer-behavior
+    indent: True
+  - endheader: True

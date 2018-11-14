@@ -20,35 +20,13 @@ class PwFooter extends PolymerElement {
       }
 
       a {
-        color: #999;
+        color: #333;
         text-decoration: none;
-      }
-
-      .footer-media-links {
-        background: #e8345a;  /* a more sedated version of pink-a400 */
-        padding: 20px;
-      }
-
-      .footer-media-links a {
-        color: black;
-        display: inline-block;
-        padding: 3px 20px;
-        font-size: 13px;
-        font-weight: 500;
-        text-shadow: none;
-        text-decoration: none;
-        text-align: center;
-        min-width: 100px;
-        white-space: nowrap;
-      }
-
-      .footer-media-links a span {
-        line-height: 24px;
-        margin-left: 5px;
       }
 
       .footer-links {
-        background: #263238;  /* blue-grey-900 */
+        /* background: #263238;  /* blue-grey-900 */ 
+        background: white;
         padding: 30px 10px;
       }
 
@@ -58,7 +36,7 @@ class PwFooter extends PolymerElement {
 
       .footer-links .title {
         font-family: 'Roboto Slab', 'Roboto', 'Noto', sans-serif;
-        color: white;
+        color: black; 
         border-top: 1px solid #707375;
         padding-top: 10px;
         font-size: 13px;
@@ -66,20 +44,28 @@ class PwFooter extends PolymerElement {
 
       .footer-links a {
         text-decoration: none;
-        color: #979797;
+        /* color: #979797; */
         display: block;
         font-size: 11px;
         line-height: 20px;
       }
 
       .copyright {
-        background: black;
-        color: white;
+        background: white;
+        color: black;
         padding: 10px;
       }
-
+      
       .copyright div {
         font-size: 11px;
+      }
+
+      .copyright span.attribution {
+        font-size: 16px;
+      }
+
+      span.attribution a {
+        color: #1e88e5;
       }
 
       .copyright img {
@@ -119,69 +105,16 @@ class PwFooter extends PolymerElement {
       }
     </style>
 
-    <footer>
-      <section class="footer-media-links">
-        <div class="layout horizontal center center-justified">
-          <a href="http://plus.google.com/107187849809354688692/" title="Follow +polymer on Google+" aria-label="Follow polymer on Google+">
-            <iron-icon icon="social-icons:gplus"></iron-icon>
-            <span>Polymer</span></a>
-          <a href="https://twitter.com/intent/follow?screen_name=polymer" title="Follow @polymer on Twitter" aria-label="Follow polymer on Twitter">
-            <iron-icon icon="social-icons:twitter"></iron-icon>
-            <span>@Polymer</span>
-          </a>
-          <a href="https://github.com/polymer" title="Get the Polymer code on GitHub" aria-label="Get the Polymer code on GitHub">
-            <iron-icon icon="social-icons:github"></iron-icon>
-            <span>/Polymer</span>
-          </a>
-          <a href="https://polymer-slack.herokuapp.com/" title="Join the Polymer slack channel" aria-label="Join the Polymer slack channel">
-            <iron-icon icon="social-icons:slack"></iron-icon>
-            <span>Slack Channel</span>
-          </a>
-          <a href="https://stackoverflow.com/questions/tagged/polymer" title="StackOverflow questions tagged Polymer" aria-label="StackOverflow questions tagged Polymer">
-            <iron-icon icon="social-icons:so"></iron-icon>
-            <span>Stack Overflow</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="footer-links layout horizontal justified">
-        <div class="flex">
-          <div class="title">Getting Started</div>
-          <a href="/2.0/start/first-element/intro">Your first element</a>
-          <a href="/2.0/start/toolbox/set-up">Your first app</a>
-          <a href="/2.0/docs/tools/overview">Using the tools</a>
-        </div>
-
-        <div class="flex">
-          <div class="title">Polymer Docs</div>
-          <a href="/2.0/docs/api/">Polymer 2.x API Reference</a>
-          <a href="/2.0/docs/devguide/feature-overview">Polymer 2.x Guides</a>
-          <a href="/1.0/docs/devguide/feature-overview">Polymer 1.x Guides</a>
-        </div>
-
-        <div class="flex">
-          <div class="title">App Toolbox</div>
-          <a href="/2.0/toolbox/index">Overview</a>
-          <a href="/2.0/toolbox/case-study">App Case Study</a>
-        </div>
-
-        <div class="flex">
-          <div class="title">Blog</div>
-          <a href="/blog/">Articles</a>
-          <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo">Polycasts</a>
-        </div>
-
-        <div class="flex">
-          <div class="title">Community</div>
-          <a href="/community/">Resources</a>
-          <a href="https://www.webcomponents.org/">Element Catalog</a>
-        </div>
-      </section>
-
+    <footer>        
       <div class="copyright layout horizontal">
         <div class="flex">
-          &copy; 2017 Polymer Authors.
-          <span class="additional-text">Code Licensed under the BSD License. Documentation licensed under CC BY 3.0.<span>
+          <span class="attribution">Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.</span><br>
+          Copyright 2018 The Polymer Project Authors. 
+          <span class="additional-text">Code licensed under the
+          <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>. 
+          Documentation licensed under CC BY 3.0.
+        </span>
+          
         </div>
         <a href="#" on-click="_smoothScrollToTop">
           Back to Top<img src="/images/logos/p-logo.png" alt="Polymer Logo">

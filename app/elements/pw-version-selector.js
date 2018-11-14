@@ -87,7 +87,7 @@ class PwVersionSelector extends PolymerElement {
       this.v1PageLink;
     // Don't bother updating activeDocsVersion, since this element will be destroyed once navigation completes.
     // this.activeDocsVersion = newSelection;
-    if (!path) path = '/' + newSelection + '/start/';
+    if (!path) path = '/' + newSelection + '/docs/devguide/feature-overview';
 
     window.history.pushState({}, '', window.location.origin + path);
     window.dispatchEvent(new CustomEvent('location-changed'));

@@ -44,12 +44,10 @@ if 'CURRENT_VERSION_ID' in os.environ:
 
 REDIRECTS_FILE = 'redirects.yaml'
 NAV_FILE = '%s/nav.yaml'
-ARTICLES_FILE = 'blog.yaml'
-AUTHORS_FILE = 'authors.yaml'
 IS_DEV = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 
 # base path for edit-on-github links
-BASE_EDIT_PATH = "https://github.com/Polymer/docs/edit/master/app/%s.md"
+BASE_EDIT_PATH = "https://github.com/Polymer/polymer-library-docs/edit/master/app/%s.md"
 
 def render(out, template, data={}):
   try:
@@ -107,18 +105,6 @@ def read_nav_file(filename, version):
               else:
                 link['name'] = 'index'
   return nav
-
-def read_articles_file(articlefile, authorfile):
-  articles = load_yaml_config(articlefile)
-  authors = load_yaml_config(authorfile)
-
-  # For each article, smoosh in the author details.
-  for article in articles:
-    if 'author' in article and article['author'] in authors:
-      article['author'] = authors[article['author']];
-    else:
-      logging.warning('Missing author info for %s.' % article['title'])
-  return articles
 
 def handle_404(req, resp, data, e):
   resp.set_status(404)
@@ -198,24 +184,6 @@ class Site(webapp2.RequestHandler):
           break
     return versioned_paths
 
-  def get_articles(self):
-    articles_cache = MEMCACHE_PREFIX + ARTICLES_FILE
-    articles = memcache.get(articles_cache)
-
-    if articles is None or IS_DEV:
-      articles = read_articles_file(ARTICLES_FILE, AUTHORS_FILE)
-      memcache.add(articles_cache, articles)
-
-    return articles
-
-  def get_active_article(self, articles, path):
-    # Find the article that matches this path
-    fixed_path = '/' + path
-    for article in articles:
-      if article['path'] == fixed_path:
-        return article
-    return None
-
   def get(self, path):
     if self.redirect_if_needed(self.request.path):
       return
@@ -247,7 +215,7 @@ class Site(webapp2.RequestHandler):
         'section_nav': self.get_section_nav(version, shortpath),
         'path': '/' + path,
         # API docs are not editable in GH.
-        'edit_on_github': path.find('.0/docs/api/') == -1,
+        'edit_on_github': path.find('.0/api/') == -1,
         'edit_on_github_path': BASE_EDIT_PATH % edit_on_github_path,
         'versioned_paths': self.get_versioned_paths(shortpath),
         # we use this as a macro in cross-references.
@@ -255,17 +223,9 @@ class Site(webapp2.RequestHandler):
         'polymer_version_dir': version
       }
     else:
-      articles = None
-      active_article = None
-
-      if template_path.startswith('blog') or template_path == 'index.html':
-        articles = self.get_articles()
-        active_article = self.get_active_article(articles, template_path)
 
       data = {
-        'site_nav': self.get_site_nav('1.0') + self.get_site_nav('2.0') + self.get_site_nav('3.0'),
-        'articles': articles,
-        'active_article': active_article
+        'site_nav': self.get_site_nav('1.0') + self.get_site_nav('2.0') + self.get_site_nav('3.0')
       }
 
     # Add .html to construct template path.

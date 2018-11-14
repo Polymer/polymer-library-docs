@@ -72,13 +72,13 @@ To remove the dependency from `node_modules` and `package.json`:
 
 Import your dependencies using module specifiers:
 
-    src/my-el/my-el.js {.caption}
+src/my-el/my-el.js {.caption}
 
-    ```js
-    import {PolymerElement} from '@polymer/polymer/polymer-element.js';
-    import '@polymer/paper-button/paper-button.js';
-    import '../child-el/child-el.js';
-    ```
+```js
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@polymer/paper-button/paper-button.js';
+import '../child-el/child-el.js';
+```
 
 *   When importing a dependency installed using npm, use the package name, followed
     by the path to the module. 
@@ -96,4 +96,4 @@ Import your dependencies using module specifiers:
     (e.g. `https://unpkg.com/thing@1.0.1/index.js`). Polymer CLI doesn't rewrite these
     specifiers.
 
-See [Build for production](/{{{polymer_version_dir}}}/toolbox/build-for-production#transforms) for more information on how Polymer CLI resolves imports.
+See [Build for production](/{{{polymer_version_dir}}}/docs/apps/build-for-production#transforms) for more information on how Polymer CLI resolves imports.

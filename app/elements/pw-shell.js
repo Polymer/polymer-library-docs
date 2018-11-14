@@ -162,27 +162,21 @@ class PwShell extends PolymerElement {
 
         <a href="/" class="logo-link">
           <img src="/images/logos/p-logo.png" alt="Polymer Logo">
-          <span>Polymer Project</span>
+          <span>Polymer Library</span>
         </a>
 
         <div class="flex"></div>
 
         <nav>
           <iron-selector class="sections-tabs" attr-for-selected="name" activate-event="" selected="[[_computeSection(path)]]">
-            <a href="/1.0/start/" name="1.0/start" data-version="1.0">Start</a>
-            <a href="/1.0/docs/devguide/feature-overview" name="1.0/docs" data-version="1.0">Polymer</a>
-            <a href="/1.0/toolbox/" name="1.0/toolbox" data-version="1.0">App Toolbox</a>
+            <a href="/1.0/docs/devguide/feature-overview" name="1.0/docs" data-version="1.0">Guides</a>
+            <a href="/1.0/api/classes/Polymer.Base" name="/1.0/api" data-version="1.0">API</a>
 
-            <a href="/2.0/start/" name="2.0/start" data-version="2.0">Start</a>
-            <a href="/2.0/docs/devguide/feature-overview" name="2.0/docs" data-version="2.0">Polymer</a>
-            <a href="/2.0/toolbox/" name="2.0/toolbox" data-version="2.0">App Toolbox</a>
+            <a href="/2.0/docs/devguide/feature-overview" name="2.0/docs" data-version="2.0">Guides</a>
+            <a href="/2.0/api/" name="2.0/docs" data-version="2.0">API</a>
 
-            <a href="/3.0/start/" name="3.0/start" data-version="3.0">Start</a>
-            <a href="/3.0/docs/devguide/feature-overview" name="3.0/docs" data-version="3.0">Polymer</a>
-            <a href="/3.0/toolbox/" name="3.0/toolbox" data-version="3.0">App Toolbox</a>
-
-            <a href="/blog/" name="blog">Blog</a>
-            <a href="/community/" name="community">Community</a>
+            <a href="/3.0/docs/devguide/feature-overview" name="3.0/docs" data-version="3.0">Guides</a>
+            <a href="/3.0/api/" name="3.0/api" data-version="3.0">API</a>
           </iron-selector>
         </nav>
 

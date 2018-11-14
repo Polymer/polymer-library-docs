@@ -12,4 +12,4 @@ The Polymer Project offers a range of tools to help developers write web compone
 
 * The [Web services](services) page lists helpful services to speed up the development process.
 
-For information on the build and deployment processes for Polymer applications, see the [Polymer App Toolbox section](/{{{polymer_version_dir}}}/toolbox/).
+For information on the build and deployment processes for Polymer applications, see the [Polymer App Toolbox section](/{{{polymer_version_dir}}}/docs/apps/).
