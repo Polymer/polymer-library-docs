@@ -263,8 +263,8 @@ gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
     '\n'
   ];
   return gulp.src(['app/js/**/*.js'])
-    .pipe(gulpUglifyEs()) // Minify js output
     .pipe($.header(helperCodeSnippets.join('')))
+    .pipe(gulpUglifyEs()) // Minify js output
     .pipe(gulp.dest('dist/js'));
 });
 

@@ -247,6 +247,10 @@ class PwShell extends PolymerElement {
     // probably not looking at the bottom of the page on first paint. Also
     // FREAM (First-paint Rules Everything Around Me)
     afterNextRender(this, function() {
+      // iron-doc-viewer in lazy-elements will load Prism - this ensures it won't
+      // syntax highlight things already on the page.
+      window.Prism = { manual: true };
+
       // Ignore jshint for dynamic import().
       import('./lazy-elements.js'); // jshint ignore:line
     });
