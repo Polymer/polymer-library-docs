@@ -12,7 +12,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 // const gulp = require('gulp');
 const gulp = require('gulp-help')(require('gulp'));
 const $ = require('gulp-load-plugins')();
-const cssslam = require('css-slam');
 const swPrecache = require('sw-precache');
 const argv = require('yargs').argv;
 const browserSync = require('browser-sync').create();
@@ -40,6 +39,8 @@ const merge = require('merge-stream');
 const path = require('path');
 const runSequence = require('run-sequence');
 const toc = require('toc');
+const composer = require('gulp-uglify/composer');
+const gulpUglifyEs = composer(require('uglify-es'), console);
 
 const AUTOPREFIXER_BROWSERS = ['last 2 versions', 'ios 8', 'Safari 8'];
 
@@ -97,8 +98,8 @@ gulp.task('generate-service-worker', function() {
       `${rootDir}/elements/**`,
       `${rootDir}/js/*.js`,
       `${rootDir}/css/*.css`,
-      `${rootDir}/bower_components/webcomponentsjs/custom-elements-es5-adapter.js`,
-      `${rootDir}/bower_components/webcomponentsjs/webcomponents-loader.js`,
+      `${rootDir}/webcomponentsjs/custom-elements-es5-adapter.js`,
+      `${rootDir}/webcomponentsjs/webcomponents-loader.js`,
     ],
     dynamicUrlToDependencies: {
       '/': partialTemplateFiles.concat([`${rootDir}/index.html`]),
@@ -117,7 +118,7 @@ gulp.task('generate-service-worker', function() {
         }
       },
       {
-        urlPattern: new RegExp('/bower_components/webcomponentsjs/.*.js'),
+        urlPattern: new RegExp('/webcomponentsjs/.*.js'),
         handler: 'fastest',
         options: {
           cache: {
@@ -252,8 +253,18 @@ gulp.task('jshint', 'Lint JS', function() {
 });
 
 gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
+  const externalJs = require('polymer-cli/node_modules/polymer-build/lib/external-js');
+  const helperCodeSnippets = [
+    externalJs.getBabelHelpersFull(),
+    '\n',
+    externalJs.getAmdLoader(),
+    '\n',
+    fs.readFileSync(require.resolve('web-animations-js/web-animations-next-lite.min.js'), 'utf-8'),
+    '\n'
+  ];
   return gulp.src(['app/js/**/*.js'])
-    .pipe($.uglify({preserveComments: 'some'})) // Minify js output
+    .pipe($.header(helperCodeSnippets.join('')))
+    .pipe(gulpUglifyEs()) // Minify js output
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -297,9 +308,9 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
      ])
     .pipe(gulp.dest('dist'));
 
-  const bower = gulp.src([
-      'app/bower_components/webcomponentsjs/*'
-    ], {base: 'app/'})
+  const webcomponentsjs = gulp.src([
+      'node_modules/@webcomponents/webcomponentsjs/**'
+    ], {base: 'node_modules/@webcomponents/'})
     .pipe(gulp.dest('dist'));
 
   // Copy the bundles that polymer build produced.
@@ -316,7 +327,7 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
     ])
     .pipe(gulp.dest('dist/2.0/samples/homepage/google-map'));
 
-  return merge(app, docs, samples, gae, bower, bundles, demo1, demo2);
+  return merge(app, docs, samples, gae, webcomponentsjs, bundles, demo1, demo2);
 });
 
 gulp.task('watch', 'Watch files for changes', function() {

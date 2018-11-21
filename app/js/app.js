@@ -58,6 +58,9 @@ window.showToast = function(message) {
   toast.show();
 };
 
+// Entypoint for element definitions - full path is needed for fragment loading on any doc URL.
+window.define([window.location.origin + '/elements/pw-shell.js']);
+
 // Register service worker, if supported, after the load event (to deprioritize it after lazy imports).
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
