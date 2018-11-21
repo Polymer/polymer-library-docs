@@ -59,8 +59,8 @@ handlers:
   static_dir: 3.0/samples/
   secure: always
 
-- url: /3.0/start/samples
-  static_dir: 3.0/start/samples
+- url: /3.0/docs/samples
+  static_dir: 3.0/docs/samples
   secure: always
 
 - url: .*
