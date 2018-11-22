@@ -10,24 +10,24 @@
   - title: Feature overview
     path: /2.0/docs/devguide/feature-overview
   - title: Try Polymer
-    path: /2.0/start/quick-tour
+    path: /2.0/docs/quick-tour
   - title: Install Polymer 2.x
-    path: /2.0/start/install-2-0
+    path: /2.0/docs/install-2-0
   - header: "Tutorial: Build an element"
   - title: 1. Get set up
-    path: /2.0/start/first-element/intro
+    path: /2.0/docs/first-element/intro
     indent: True
   - title: 2. Add local DOM
-    path: /2.0/start/first-element/step-2
+    path: /2.0/docs/first-element/step-2
     indent: True
   - title: 3. Data binding & properties
-    path: /2.0/start/first-element/step-3
+    path: /2.0/docs/first-element/step-3
     indent: True
   - title: 4. React to input
-    path: /2.0/start/first-element/step-4
+    path: /2.0/docs/first-element/step-4
     indent: True
   - title: 5. Theming with custom properties
-    path: /2.0/start/first-element/step-5
+    path: /2.0/docs/first-element/step-5
     indent: True
   - endheader: True
   - header: About this release

@@ -81,7 +81,7 @@ class DemoTabs extends PolymerElement {
           </paper-tabs>
           <a href="[[src]]" target="_blank" hidden$="[[_hideEditorButton]]">
             <paper-button id="editButton" on-tap="_launchEditor" raised>
-              Edit and Preview
+              [[_editorButtonText]]
             </paper-button>
           </a>
         </div>
@@ -143,6 +143,10 @@ class DemoTabs extends PolymerElement {
         value: 'static',
       },
 
+      _editorButtonText: {
+        type: String,
+      },
+
       _iframeHidden: {
         type: Boolean,
       },
@@ -150,6 +154,7 @@ class DemoTabs extends PolymerElement {
       _hideEditorButton: {
         type: Boolean,
       },
+
     };
   }
 
@@ -165,6 +170,7 @@ class DemoTabs extends PolymerElement {
   _srcProjectPathChanged(src, projectPath) {
     const isPlunkr = !!this.src;
     const isStackBlitz = !!this.projectPath;
+    this._editorButtonText = isPlunkr ? 'Edit on Plunker' : 'Edit and Preview';
     this._iframeHidden = !isPlunkr;
     this._hideEditorButton = !isPlunkr && !isStackBlitz;
   }
