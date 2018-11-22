@@ -50,7 +50,7 @@ an element name with a class, so you can add properties and methods to your cust
 element. The custom element's name **must start with an ASCII letter and
 contain a dash (-)**.
 
-<demo-tabs selected="0" name="qt-1-register" src="http://plnkr.co/edit/Q4E8zO?p=preview">
+<demo-tabs selected="0" name="qt-1-register" src="https://plnkr.co/edit/uiJ8nA?p=preview">
   <paper-tab slot="tabs">custom-element.html</paper-tab>
   <div>
 
@@ -94,7 +94,7 @@ You can use the `ready` callback for one-time initialization work after the elem
 Many elements include some internal DOM nodes to implement the element's UI and behavior.
 You can use Polymer's DOM templating to create a shadow DOM tree for your element.
 
-<demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/buPxSJ?p=preview">
+<demo-tabs selected="0" name="qt-2-shadow-dom" src="http://plnkr.co/edit/GBt0dZn1WeS2lpBK6b8q?p=preview">
   <paper-tab slot="tabs">dom-element.html</paper-tab>
   <div>
 
@@ -129,7 +129,7 @@ so they render as if they were inserted into the shadow DOM tree.
 This example creates a simple tag that decorates an image by wrapping it
 with a styled `<div>` tag.
 
-<demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/KvBnmE?p=preview">
+<demo-tabs selected="0" name="qt-3-compose" src="http://plnkr.co/edit/VZ5Gfk?p=preview">
   <paper-tab slot="tabs">picture-frame.html</paper-tab>
   <div>
 
@@ -169,7 +169,7 @@ Data binding is a great way to quickly propagate changes in your element and red
 You can bind properties in your component using the "double-mustache" syntax (`{%raw%}{{}}{%endraw%}`).
 The `{%raw%}{{}}{%endraw%}` is replaced by the value of the property referenced between the brackets.
 
-<demo-tabs selected="0" name="qt-4-data-binding" src="http://plnkr.co/edit/8mZK8S?p=preview">
+<demo-tabs selected="0" name="qt-4-data-binding" src="http://plnkr.co/edit/c8kQ7DdDMtU8yj7pMl7Z?p=preview">
   <paper-tab slot="tabs">name-tag.html</paper-tab>
   <div>
 
@@ -207,7 +207,7 @@ values, configuring properties from markup, observing property changes, and more
 The following example declares the `owner` property from the last example.
 It also shows configuring the owner property from markup in `index.html`.
 
-<demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/3Nz8GL?p=preview">
+<demo-tabs selected="0" name="qt-5-declare-property" src="http://plnkr.co/edit/sxfvyCPbTMVFdXSEWfte?p=preview">
   <paper-tab slot="tabs">configurable-name-tag.html</paper-tab>
   <div>
 
@@ -242,7 +242,7 @@ can optionally support two-way binding, using curly braces (`property-name="{{bi
 This example uses two-way binding: binding the value of a custom input element (`iron-input`)
 to the element's `owner` property, so it's updated as the user types.
 
-<demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/03HGzn98uIN5I1WgkDwu?p=preview">
+<demo-tabs selected="0" name="qt-6-bind-property" src="http://plnkr.co/edit/elrWeyQl9webeewXlrR6?p=preview">
   <paper-tab slot="tabs">editable-name-tag.html</paper-tab>
   <div>
 
@@ -273,7 +273,7 @@ data binding and input validation.
 
 The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 
-<demo-tabs selected="0" name="qt-7-dom-repeat" src="http://plnkr.co/edit/FdgkAtcLFHX5TpTsYtZn?p=preview">
+<demo-tabs selected="0" name="qt-7-dom-repeat" src="https://plnkr.co/edit/oPNQvzyxLZzPSrUhcOwP?p=preview">
   <paper-tab slot="tabs">employee-list.html</paper-tab>
   <div>
 
