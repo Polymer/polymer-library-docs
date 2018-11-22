@@ -269,7 +269,7 @@ Try it out in **Plunker**:
 data binding and input validation.
 {: .alert .alert-info }
 
-### Using `<dom-repeat>` for template repeating
+### Render a list with dom-repeat
 
 The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 

@@ -299,9 +299,9 @@ data binding and input validation.
 <p><a href="/3.0/docs/devguide/data-binding#two-way-bindings" class="blue-button">
 Learn more: Two-way binding</a></p>
 
-### Using <dom-repeat> for template repeating
+### Render a list with dom-repeat
 
-The template repeater (`<dom-repeat>`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
+The template repeater (`dom-repeat`) is a specialized template that binds to an array. It creates one instance of the template's contents for each item in the array.
 
 <demo-tabs selected="0" name="qt-7-dom-repeat" editor-open-file="employee-list.js" project-path="/3.0/docs/samples/employee-list">
   <paper-tab slot="tabs">employee-list.js</paper-tab>
