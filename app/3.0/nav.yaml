@@ -181,7 +181,7 @@
     path: /3.0/api/elements/dom-bind
     indent: True
   - title: dom-if.js
-    path: /3.0/api/elements/dom-bind
+    path: /3.0/api/elements/dom-if
     indent: True
   - title: dom-module.js
     path: /3.0/api/elements/dom-module
