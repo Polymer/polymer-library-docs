@@ -161,7 +161,6 @@ class PwShell extends PolymerElement {
         <paper-icon-button class="drawer-toggle" icon="pw-icons:menu" on-click="_toggleDrawer"></paper-icon-button>
 
         <a href="/" class="logo-link">
-          <img src="/images/logos/p-logo.png" alt="Polymer Logo">
           <span>Polymer Library</span>
         </a>
 
