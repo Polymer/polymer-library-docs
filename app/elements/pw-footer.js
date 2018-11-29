@@ -57,11 +57,11 @@ class PwFooter extends PolymerElement {
       }
       
       .copyright div {
-        font-size: 11px;
+        font-size: 16px;
       }
 
-      .copyright span.attribution {
-        font-size: 16px;
+      .copyright span.additional-text {
+        font-size: 11px;
       }
 
       span.attribution a {
@@ -90,12 +90,12 @@ class PwFooter extends PolymerElement {
       }
 
       @media (max-width: 479px) {
-        .footer-links.layout.horizontal {
+        .copyright.layout.horizontal {
           flex-direction: column;
           padding: 20px 10px;
         }
 
-        .footer-links > * {
+        .copyright > * {
           flex: 0 0 auto;
         }
 
@@ -108,17 +108,18 @@ class PwFooter extends PolymerElement {
     <footer>        
       <div class="copyright layout horizontal">
         <div class="flex">
-          <span class="attribution">Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.</span><br>
-          Copyright 2018 The Polymer Project Authors. 
-          <span class="additional-text">Code licensed under the
+          Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.  
+          <span class="additional-text">Copyright 2018 The Polymer Project Authors. 
+          Code licensed under the
           <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>. 
           Documentation licensed under CC BY 3.0.
-        </span>
-          
+          </span>
         </div>
-        <a href="#" on-click="_smoothScrollToTop">
-          Back to Top<img src="/images/logos/p-logo.png" alt="Polymer Logo">
-        </a>
+        <div>
+          <a href="https://www.github.com/polymer/polymer" rel="noopener" target="_blank"><iron-icon icon="social-icons:github"></iron-icon></a>
+          <a href="https://www.twitter.com/polymer" rel="noopener" target="_blank"><iron-icon icon="social-icons:twitter"></iron-icon></a> 
+          <a href="https://groups.google.com//forum/#!forum/polymer-dev" rel="noopener" target="_blank"><iron-icon icon="communication:email"<iron-icon></iron-icon></a>
+        </div>
       </div>
     </footer>
     `;
