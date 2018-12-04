@@ -92,7 +92,7 @@ Notes:
 #### Should I use webcomponents-lite.js or webcomponents.js?
 
 We recommend using the `webcomponents-lite.js` version of the polyfills with Polymer 1.0+. This
-version is designed to be used with [Shady DOM](https://www.polymer-project.org/1.0/blog/shadydom.html),
+version is designed to be used with [Shady DOM](https://www.polymer-project.org/blog/shadydom.html),
 and does not contain the full Shadow DOM polyfill.
 
 Although the full `webcomponents.js` polyfill works with Polymer 1.0+, we do not recommend using it.

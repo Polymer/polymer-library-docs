@@ -12,7 +12,7 @@ This chapter teaches you more about the `polymer-3-application` template.
 See [Application templates](/{{{polymer_version_dir}}}/docs/apps/templates) for more details on other templates.
 
 For a more full-featured progressive web app template, you can use the starter kit template 
-(`polymer-3-starter-kit`). See [the Polymer Starter Kit tutorial](/{{{polymer_version_dir}}}/docs/toolbox/set-up) for setup instructions.
+(`polymer-3-starter-kit`). See [the Polymer Starter Kit tutorial](/{{{polymer_version_dir}}}/docs/apps/set-up) for setup instructions.
 
 ## Set up basic app project {#basic-app}
 

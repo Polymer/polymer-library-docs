@@ -77,5 +77,5 @@ For more information on the tools and options in the Polymer CLI, see the docume
 
 ## Next steps {#next}
 
-* [Build your first Polymer app](/{{{polymer_version_dir}}}/docs/toolbox/set-up)
+* [Build your first Polymer app](/{{{polymer_version_dir}}}/docs/apps/set-up)
 * [Build your first element with the Polymer library](/{{{polymer_version_dir}}}/docs/first-element/intro)

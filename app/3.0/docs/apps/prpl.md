@@ -122,7 +122,7 @@ The shell (including its static dependencies) should contain everything needed f
 
 By default, the Polymer CLI build process produces an unbundled build designed for server/browser combinations that support HTTP/2 and HTTP/2 server push to deliver the resources the browser needs for a fast first paint while optimizing caching.
 
-To generate a bundled build, designed to minimize the number of round-trips required to get the application running on server/browser combinations that don't support server push, you will need to pass a command line option or configure your [polymer.json file](polymer-json) appropriately.
+To generate a bundled build, designed to minimize the number of round-trips required to get the application running on server/browser combinations that don't support server push, you will need to pass a command line option or configure your [polymer.json file](/{{{polymer_version_dir}}}/docs/tools/polymer-json) appropriately.
 
 If you have multiple builds, your server logic must deliver the appropriate build for each browser.
 

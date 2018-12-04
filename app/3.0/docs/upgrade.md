@@ -172,7 +172,7 @@ Before upgrading an element, make sure that any changes in your repo are committ
     afterNextRender(callback);
     ```
 
-    The 3.x modules correspond to the 2.x HTML imports. See the [3.0 API docs](/3.0/docs/api/) for a list of exports from each module.
+    The 3.x modules correspond to the 2.x HTML imports. See the [3.0 API docs](/3.0/api/) for a list of exports from each module.
 
 1.  Remove any top-level IIFE wrappers.
 

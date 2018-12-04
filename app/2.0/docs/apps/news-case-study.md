@@ -49,7 +49,7 @@ more information on views and
 routing](case-study#views).
 
 For more information on encapsulated routing, see [Encapsulated routing with
-elements](/blog/routing).
+elements](https://www.polymer-project.org/blog/routing).
 
 For more information on the `<app-route>` Polymer element used in these implementations, see the
 [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route).

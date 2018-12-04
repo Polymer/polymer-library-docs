@@ -311,7 +311,7 @@ Note that the font family is inherited, but the text color is not. This is becau
 Polymer's custom property shim evaluates and applies custom property values once
 at element creation time.  In order to have an element (and its subtree) re-
 evaluate custom property values due to dynamic changes such as application of
-CSS classes, call the [`updateStyles`](/2.0/docs/api/elements/Polymer.Element#method-updateStyles)
+CSS classes, call the [`updateStyles`](/2.0/api/elements/Polymer.Element#method-updateStyles)
 method on the element. To update _all_ elements on the page, you can also call
 `Polymer.updateStyles`.
 
@@ -370,7 +370,7 @@ if (ShadyCSS) {
 ```
 
 Elements using the legacy API can use the
-[`getComputedStyleValue`](/2.0/docs/api/mixins/Polymer.LegacyElementMixin#method-getComputedStyleValue)
+[`getComputedStyleValue`](/2.0/api/mixins/Polymer.LegacyElementMixin#method-getComputedStyleValue)
 instance method instead of testing for `ShadyCSS`.
 
 
@@ -393,7 +393,7 @@ dynamism will continue to be explored.
 Only property definitions which match the element at *creation time* are applied.
 Any dynamic changes that update property values are not applied automatically. You
 can force styles to be re-evaluated by calling the
-[`updateStyles`](/{{{polymer_version_dir}}}/docs/api/elements/Polymer.Element#method-updateStyles) method on a
+[`updateStyles`](/{{{polymer_version_dir}}}/api/elements/Polymer.Element#method-updateStyles) method on a
 Polymer element, or `Polymer.updateStyles` to update all element
 styles.
 

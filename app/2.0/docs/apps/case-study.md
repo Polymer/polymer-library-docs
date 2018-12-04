@@ -63,7 +63,7 @@ the category "Shoes" to the browse view.
 
 More information:
 
--   [Encapsulated routing with elements](/blog/routing)
+-   [Encapsulated routing with elements](https://www.polymer-project.org/blog/routing)
 -   [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route)
 
 ## Views
@@ -125,7 +125,7 @@ _pageChanged(page, oldPage) {
 In the logic above, the home view is built into the app shell, but the other
 views are demand-loaded fragments.
 
-Shop also uses [`dom-if`](/{{{polymer_version_dir}}}/docs/api/elements/Polymer.DomIf) templates to lazily create views:
+Shop also uses [`dom-if`](/{{{polymer_version_dir}}}/api/elements/Polymer.DomIf) templates to lazily create views:
 
 ```html
 <!-- Lazy-create the tabs for larger screen sizes. -->

@@ -36,7 +36,7 @@ Here's a quick sample of defining an element in Polymer 3.0:
 
 The Polymer 3.0 API is almost 100% backward compatible with Polymer 2.x—the only changes are removing APIs related to HTML Imports (such as `importHref`), and converting Polymer's API to be module-based rather than globals-based.
 
-[API reference](/3.0/docs/api/)
+[API reference](/3.0/api/)
 
 ## Upgrade path
 
