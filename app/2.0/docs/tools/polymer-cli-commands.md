@@ -145,7 +145,7 @@ Create an unbundled build for browsers that support ES6:
 
 ## polymer init {#init}
 
-Initializes a Polymer project from one of several templates. Pre-bundled templates range from just bare-bones to fully featured applications like the [Polymer Shop app](/{{{polymer_version_dir}}}/docs/apps/case-study).
+Initializes a Polymer project from one of several templates. Pre-bundled templates range from just bare-bones to fully featured applications like the [Polymer News app](https://news-docs.polymer-project.org/).
 
 Run `polymer init` to choose a template from a list of all installed templates. Or, if you know the template name before hand, you can provide it as a command argument to select it automatically.
 

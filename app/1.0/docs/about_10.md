@@ -72,7 +72,7 @@ that don’t support shadow DOM natively. The shadow DOM polyfill was optimized
 for correctness, though it remained impossible to perfectly polyfill shadow DOM.
 Shady DOM is optimized for speed.
 
-If you're curious about the motivation behind creating shady DOM, see [What is shady dom?](../articles/shadydom.html).
+If you're curious about the motivation behind creating shady DOM, see [What is shady dom?](https://www.polymer-project.org/blog/shadydom).
 
 In the immediate future we’ll be exploring improvements to the shady DOM system to improve interoperability with other frameworks.  Shadow DOM is of course the ultimate primitive to allow for interoperability, but with shady DOM we may be able to shim such interoperability to a significant degree, focusing on common interoperability use cases.
 

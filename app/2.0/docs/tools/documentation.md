@@ -186,7 +186,7 @@ The summary is like an element summary, but must include the `@polymer` and `@mi
 
 Document any properties, methods or events inside the mixin just like you would for an element.
 
-For more information on mixins, see [Sharing code with class expression mixins](custom-elements#mixins)
+For more information on mixins, see [Sharing code with class expression mixins](/{{{polymer_version_dir}}}/docs/devguide/custom-elements#mixins)
 in Custom element concepts.
 
 ```js
@@ -265,7 +265,7 @@ MyBehaviors.HighlightStuff = { ... }
 ```
 
 When extending a behavior, you place the _new_ functionality
-in an implementation object as described in [Extending behaviors](/2.0/docs/devguide/behaviors#extending).
+in an implementation object as described in [Extending behaviors](/1.0/docs/devguide/behaviors#extending).
 
 The implementation object **must** be named with the behavior name followed
 by `Impl`, and it must be annotated with `@polymerBehavior` _followed by

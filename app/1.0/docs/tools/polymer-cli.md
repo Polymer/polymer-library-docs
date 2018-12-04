@@ -146,7 +146,7 @@ which is the most basic starting point for a Polymer-based application,
 as well as others that introduce more complex layout and application patterns.
 
 This chapter teaches you more about `basic` app projects.  See
-[Polymer App Toolbox templates]({{{polymer_version_dir}}}/docs/apps/templates) for more details on
+[Polymer App Toolbox templates](/{{{polymer_version_dir}}}/docs/apps/templates) for more details on
 other templates.
 
 ### App project architecture {#app-architecture}

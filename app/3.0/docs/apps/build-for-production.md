@@ -436,7 +436,7 @@ Configure minification in polymer.json {.caption}
 
 Polymer 3.x and the Polymer Elements are written in ES6 (also known as ES2015). To allow older browsers to render your apps, compile your code to ES5. 
 
-When you compile your code to ES5, the Polymer build tools will inject the [`custom-elements-es5-adapter.js` polyfill](polyfill) into your entrypoint so that ES6-capable browsers can still render your ES5 code.
+When you compile your code to ES5, the Polymer build tools will inject the [`custom-elements-es5-adapter.js` polyfill](/{{{polymer_version_dir}}}/docs/polyfills) into your entrypoint so that ES6-capable browsers can still render your ES5 code.
 
 Compile to es5 (adds custom-elements-es5-adapter.js) {.caption}
 

@@ -229,5 +229,5 @@ element; the element name is `iron-input`, and it _extends_ the native `<input>`
 
 Now that you understand these fundamental Polymer concepts:
 
--   Explore more with the [Build an element tutorial](first-element/intro).
+-   Explore more with the [Build an element tutorial](/1.0/docs/first-element/intro).
 -   Or [Install the Polymer CLI](/1.0/docs/tools/polymer-cli) to get started on a new project.

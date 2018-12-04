@@ -172,10 +172,10 @@
     path: /2.0/docs/apps/prpl
     indent: True
   - title: Shop App Case Study
-    path: /2.0/docs/apps/case-study.md
+    path: /2.0/docs/apps/case-study
     indent: True 
   - title: News App Case Study
-    path: /2.0/docs/apps/news-case-study.md
+    path: /2.0/docs/apps/news-case-study
     indent: True 
   - endheader: true
 
