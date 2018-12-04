@@ -549,7 +549,14 @@ background-color: var(--my-theme-color, var(--another-theme-color, blue));
 
 ### Custom property mixins
 
-Custom property *mixins* are a feature built on top of the custom property specification. Basically,
+Custom property *mixins* are a feature built on top of the custom property specification. 
+
+**Not standards track.** CSS mixins was a proposed extension to CSS custom properties,
+but it has not been implemented by any browser vendor, and the proposal is no longer 
+being worked on. Using CSS mixins will always require a polyfill. 
+{.alert .alert-warning}
+
+Basically,
 the mixin is a variable that contains multiple properties:
 
 
