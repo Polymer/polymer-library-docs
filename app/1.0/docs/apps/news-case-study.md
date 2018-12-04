@@ -46,7 +46,7 @@ subfolders.
 
 Views in the News app use the same implementation as the Shop app. [See the Shop app case study for
 more information on views and
-routing](https://www.polymer-project.org/1.0/docs/apps/case-study#views).
+routing](/1.0/docs/apps/case-study#views).
 
 For more information on encapsulated routing, see [Encapsulated routing with
 elements](https://www.polymer-project.org/blog/routing).
