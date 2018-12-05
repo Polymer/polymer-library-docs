@@ -61,17 +61,14 @@
 - /3.0/docs/api/* /3.0/api/
 - /3.0/toolbox/* /3.0/docs/apps/
 - /3.0/start/* /3.0/docs/
-- /3.0/* /3.0/
 
 - /2.0/docs/api/* /2.0/api/
 - /2.0/toolbox/* /2.0/docs/apps/
 - /2.0/start/* /2.0/docs/
-- /2.0/* /2.0/
 
 - /1.0/docs/api/* /1.0/api/
 - /1.0/toolbox/* /1.0/docs/apps/
 - /1.0/start/* /1.0/docs/
-- /1.0/* /1.0/
 
 # ------------------------------------------------------------------------------
 # Note: keep these for the tests!
