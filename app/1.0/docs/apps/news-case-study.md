@@ -80,7 +80,7 @@ to the URL that the user selects.
 
 Polymer's data system allows for data to flow one-way (downward-only, from host element to target
 element) or two-way (from host to target and target to host). For more information on data binding
-in Polymer, see [Data binding](../docs/devguide/data-binding).
+in Polymer, see [Data binding](/{{{polymer_version_dir}}}/docs/devguide/data-binding).
 
 The News app uses both one-way and two-way binding to transfer data between elements.
 
