@@ -214,7 +214,7 @@ For more information, see the documentation on [custom CSS properties](/{{{polym
 ### Next steps
 
 *   Ready to get started on your own element? You can use the Polymer CLI to
-    [Create an element project](/{{{polymer_version_dir}}}/docs/tools/polymer-cli#element).
+    [Create an element project](/{{{polymer_version_dir}}}/docs/tools/create-element-polymer-cli).
 
 *   You can also [Create an application project](/{{{polymer_version_dir}}}/docs/tools/create-app-polymer-cli)
     to get started building an application with the Polymer library.

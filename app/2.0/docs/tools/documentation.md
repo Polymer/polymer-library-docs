@@ -43,7 +43,7 @@ Serve the page using any local web server, such as `polymer serve` or `python -m
 
 ## Preview element documentation {#preview}
 
-You can use Polymer CLI's [`polymer serve`](polymer-cli#serve) command to
+You can use Polymer CLI's [`polymer serve`](polymer-cli-commands#serve) command to
 preview element docs while you're developing a component.
 
 To preview element docs:

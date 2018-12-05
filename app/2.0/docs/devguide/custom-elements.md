@@ -262,7 +262,7 @@ flattens these objects. So the properties and observers of a subclass are added 
 by the superclass.
 
 A subclass can also inherit a template from its superclass. For details, see
-[Inherited templates](dom-template#inherited-templates).
+[Inherited templates](dom-template#inherit).
 
 ## Sharing code with class expression mixins {#mixins}
 

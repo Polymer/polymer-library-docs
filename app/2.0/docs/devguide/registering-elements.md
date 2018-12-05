@@ -217,13 +217,17 @@ Polymer value-added features), so you cannot set up your own
 prototype chain. However, you can use [behaviors](#prototype-mixins) to
 share code between elements.
 
-## Lifecycle callbacks {#lifecycle-callbacks}
+### Legacy lifecycle callbacks {#lifecycle-callbacks}
 
-The Polymer.Element class implements the standard Custom Element lifecycle
-callbacks to perform tasks necessary for Polymer's built-in features.
+For legacy elements, Polymer provides a backwards-compatible set of 
+lifecycle callbacks based on the Custom Element v0 lifecycle
+callbacks.
 
 Polymer adds an extra callback, `ready`, which is invoked when Polymer has
 finished creating and initializing the element's DOM.
+
+**For the standard lifecycle callbacks,** see [Element lifecycle](custom-elements#element-lifecycle) in Custom element concepts.
+{.alert .alert-info}
 
 <table>
   <tr>
@@ -254,10 +258,8 @@ finished creating and initializing the element's DOM.
     <td>Called after the element is attached to the document. Can be called multiple
         times during the lifetime of an element. The first <code>attached</code> callback
         is guaranteed not to fire until after <code>ready</code>.
-      <p>Uses include adding document-level event listeners. (For listeners local to the element, you can use declarative
-        event handling, such as <a href="events.html#annotated-listeners">annotated
-        event listeners</a> or the
-        <a href="events#event-listeners"><code>listeners</code> object</a>.)</p>
+      <p>Uses include adding document-level event listeners. (For listeners local to the element, you can use <a href="events.html#annotated-listeners">declarative
+        event handling</a>.)</p>
      <p>Equivalent to native <code>connectedCallback</code>.</p>
       </p>
     </td>
