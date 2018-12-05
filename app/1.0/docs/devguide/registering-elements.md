@@ -441,7 +441,7 @@ and `registered`.
 
 Use the `beforeRegister` callback to transform an element's prototype before
 registration. This is useful when registering an element using an ES6 class,
-as described in the article, [Building web components using ES6 classes](/1.0/blog/es6).
+as described in the article, [Building web components using ES6 classes](https://www.polymer-project.org/blog/es6).
 
 You can implement the `registered` callback to perform one-time initialization
 when an element is registered. This is primarily useful when implementing

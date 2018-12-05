@@ -172,7 +172,7 @@ Related topics:
 
 ### Defer non-critical work
 
-When possible, defer work until after first paint. [`Polymer.RenderStatus`](/{{{polymer_version_dir}}}/docs/api/namespaces/Polymer.RenderStatus) provides a utility for this purpose. `Polymer.RenderStatus` is included by default for hybrid elements. For class-style elements using the `polymer-element.html` import, you need to import `Polymer.RenderStatus` separately.
+When possible, defer work until after first paint. [`Polymer.RenderStatus`](/{{{polymer_version_dir}}}/api/namespaces/Polymer.RenderStatus) provides a utility for this purpose. `Polymer.RenderStatus` is included by default for hybrid elements. For class-style elements using the `polymer-element.html` import, you need to import `Polymer.RenderStatus` separately.
 
 ```js
 <link rel="import" href="/bower_components/polymer/polymer-element.html">
@@ -385,7 +385,7 @@ in Document your elements.
 When creating a mixin that you intend to share with other groups or publish, a couple of additional
 steps are recommended:
 
--   Use the [`Polymer.dedupingMixin`](/{{{polymer_version_dir}}}/docs/api/#function-Polymer.dedupingMixin)
+-   Use the [`Polymer.dedupingMixin`](/{{{polymer_version_dir}}}/api/#function-Polymer.dedupingMixin)
     function to produce a mixin that can only be applied once.
 
 -   Create a unique namespace for your mixins, to avoid colliding with other mixins or classes that

@@ -84,5 +84,5 @@ a page to your app.
 <a class="blue-button"
     href="create-a-page">Next step: Create a page</a>
 
-[toolbox]: /2.0/toolbox/
+[toolbox]: /2.0/docs/apps/
 [md]: http://www.google.com/design/spec/material-design/introduction.html

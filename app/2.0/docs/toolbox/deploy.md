@@ -45,7 +45,7 @@ The builds will be output to subfolders under the `build/` folder as follows:
       es6-bundled/
       es6-unbundled/
 
-To configure a custom build, you can use command line options, or edit `polymer.json`. Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](https://www.polymer-project.org/2.0/docs/tools/polymer-json) and [building your Polymer application for production](https://www.polymer-project.org/2.0/toolbox/build-for-production).
+To configure a custom build, you can use command line options, or edit `polymer.json`. Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](https://www.polymer-project.org/2.0/docs/tools/polymer-json) and [building your Polymer application for production](https://www.polymer-project.org/2.0/docs/apps/build-for-production).
 
 ## Deploy to a server
 

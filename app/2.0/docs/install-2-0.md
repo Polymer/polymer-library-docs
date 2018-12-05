@@ -82,5 +82,5 @@ The Polymer CLI requires Node.js, npm, Git and Bower. For full installation inst
     polymer serve
     ```
 
-For information on building your project for production, see the documentation on [building Polymer applications for production]({{{polymer_version_dir}}}/docs/apps/build-for-production).
+For information on building your project for production, see the documentation on [building Polymer applications for production](/{{{polymer_version_dir}}}/docs/apps/build-for-production).
 

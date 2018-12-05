@@ -447,7 +447,7 @@ shows a simple version of this transition.
 
 <a href="https://polymerelements.github.io/app-layout/patterns/transform-navigation/" class="blue-button">Launch Demo</a>
 
-<a href="https://github.com/polymerelements/app-layout/blob/master/patterns/transform-navigation/x-app.html" class="blue-button">View full source</a>
+<a href="https://github.com/PolymerElements/app-layout/blob/1.x/patterns/transform-navigation/x-app.html" class="blue-button">View full source</a>
 
 The [Shop app](https://shop.polymer-project.org/). uses a slightly more sophisticated version of this pattern, using conditional templates
 to avoid creating the navigation elements until they're needed. This means that the app doesn't need

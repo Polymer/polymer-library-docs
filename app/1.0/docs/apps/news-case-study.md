@@ -46,10 +46,10 @@ subfolders.
 
 Views in the News app use the same implementation as the Shop app. [See the Shop app case study for
 more information on views and
-routing](https://www.polymer-project.org/1.0/toolbox/case-study#views).
+routing](/1.0/docs/apps/case-study#views).
 
 For more information on encapsulated routing, see [Encapsulated routing with
-elements](https://www.polymer-project.org/1.0/blog/routing).
+elements](https://www.polymer-project.org/blog/routing).
 
 For more information on the `<app-route>` Polymer element used in these implementations, see the
 [`<app-route>` API reference](https://www.webcomponents.org/element/PolymerElements/app-route).
@@ -80,7 +80,7 @@ to the URL that the user selects.
 
 Polymer's data system allows for data to flow one-way (downward-only, from host element to target
 element) or two-way (from host to target and target to host). For more information on data binding
-in Polymer, see [Data binding](../docs/devguide/data-binding).
+in Polymer, see [Data binding](/{{{polymer_version_dir}}}/docs/devguide/data-binding).
 
 The News app uses both one-way and two-way binding to transfer data between elements.
 

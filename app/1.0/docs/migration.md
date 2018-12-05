@@ -10,9 +10,8 @@ element from 0.5 to 1.0.
 ## Polyup Tool
 
 We have been working on a tool called `polyup` to automatically
-perform many of the changes detailed in this guide. See an interactive demo
-[here](http://polymerlabs.github.io/polyup/), and check out the list of current
-and planned upgrades that it performs on its
+perform many of the changes detailed in this guide. Check out the list of current
+that it performs on its
 [README at github](https://github.com/PolymerLabs/polyup#html).
 
 ## Migration
@@ -935,7 +934,7 @@ For more details on the `vulcanize` arguments, see the [README](https://github.c
 ## Element & helper method changes {#methods}
 
 Some element methods and helper methods have been renamed, moved, or changed signatures.
-For a complete list of element methods, see the [API reference](http://polymer.github.io/polymer/).
+For a complete list of element methods, see the [API reference](https://polymer-library.polymer-project.org/1.0/api/classes/Polymer.Base).
 
 ### Element methods: job renamed to debounce
 

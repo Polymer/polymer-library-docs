@@ -146,7 +146,7 @@ which is the most basic starting point for a Polymer-based application,
 as well as others that introduce more complex layout and application patterns.
 
 This chapter teaches you more about `basic` app projects.  See
-[Polymer App Toolbox templates]({{{polymer_version_dir}}}/docs/apps/templates) for more details on
+[Polymer App Toolbox templates](/{{{polymer_version_dir}}}/docs/apps/templates) for more details on
 other templates.
 
 ### App project architecture {#app-architecture}
@@ -155,7 +155,7 @@ Polymer CLI is designed for apps that follow the [app shell
 architecture](https://developers.google.com/web/updates/2015/11/app-shell).
 
 There are fundamental concepts of the app shell architecture that you should understand before creating your app project with Polymer CLI: the entrypoint,
-the shell, and fragments. See [App structure](/1.0/toolbox/server#app-structure)
+the shell, and fragments. See [App structure](/1.0/docs/apps/server#app-structure)
 from the App Toolbox docs for an in-depth overview of these concepts.
 
 ### Set up basic app project {#basic-app}

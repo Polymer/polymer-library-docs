@@ -186,7 +186,7 @@ div {
 }
 ```
 
-## Inheritance and global styles
+### Inheritance and global styles
 
 Custom CSS properties inherit down the DOM hierarchy. In the code sample below, `<custom-element>` will inherit the custom properties defined for `div`, but not the custom properties defined for `span`.
 
@@ -294,6 +294,11 @@ static get template () {
 
 Using CSS mixins, you can define a set of CSS properties as a single custom property.
 
+**Not standards track.** CSS mixins was a proposed extension to CSS custom properties,
+but it has not been implemented by any browser vendor, and the proposal is no longer 
+being worked on. Using CSS mixins will always require a polyfill. 
+{.alert .alert-warning}
+
 This is similar to defining a custom property with `var()`, but the value of the property is an object that defines one or more rules:
 
 ```css
@@ -399,12 +404,12 @@ import '@webcomponents/shadycss/entrypoints/apply-shim.js';
 
 [See it in Plunker](http://plnkr.co/edit/glgUKv?p=preview)
 
-### Custom property API for Polymer elements {#style-api}
+## Custom property API for Polymer elements {#style-api}
 
 Polymer's custom property shim evaluates and applies custom property values once
 at element creation time. In order to have an element (and its subtree) re-
 evaluate custom property values due to dynamic changes such as application of
-CSS classes, call the [`updateStyles`](/3.0/docs/api/polymer-element#PolymerElement-method-updateStyles)
+CSS classes, call the [`updateStyles`](/3.0/api/polymer-element#PolymerElement-method-updateStyles)
 method on the element. To update _all_ elements on the page, you can also call
 `Polymer.updateStyles`.
 
@@ -449,10 +454,10 @@ if (ShadyCSS) {
 ```
 
 Elements using the legacy API can use the
-[`getComputedStyleValue`](/3.0/docs/api/legacy/legacy-element-mixin#LegacyElementMixin-method-getComputedStyleValue)
+[`getComputedStyleValue`](/3.0/api/legacy/legacy-element-mixin#LegacyElementMixin-method-getComputedStyleValue)
 instance method instead of testing for `ShadyCSS`.
 
-### Custom properties shim limitations
+## Custom properties shim limitations
 
 Cross-platform support for custom properties is provided in Polymer by a
 JavaScript library that **approximates** the capabilities of the CSS Variables
@@ -466,12 +471,12 @@ interests of practicality and performance.
 Below are current limitations of the shim. Improvements to performance and
 dynamism will continue to be explored.
 
-#### Dynamism limitations
+### Dynamism limitations
 
 Only property definitions which match the element at *creation time* are applied.
 Any dynamic changes that update property values are not applied automatically. You
 can force styles to be re-evaluated by calling the
-[`updateStyles`](/{{{polymer_version_dir}}}/docs/api/polymer-element#PolymerElement-method-updateStyles) method on a
+[`updateStyles`](/{{{polymer_version_dir}}}/api/polymer-element#PolymerElement-method-updateStyles) method on a
 Polymer element, or the global `updateStyles` function to update all element
 styles.
 
@@ -528,7 +533,7 @@ have the desired effect, since the dynamism is related to *application* of a cus
 }
 ```
 
-#### Inheritance limitations
+### Inheritance limitations
 
 Unlike normal CSS inheritance which flows from parent to child, custom
 properties in Polymer's shim can only change when inherited by a custom element
@@ -566,7 +571,7 @@ class MyElement extends PolymerElement {
 }
 ```
 
-#### Styling distributed elements not supported
+### Styling distributed elements not supported
 
 The custom properties shim doesn't support styling distributed elements.
 

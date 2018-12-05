@@ -142,9 +142,6 @@
   - title: Global settings
     path: /1.0/docs/devguide/settings
     indent: True
-  - title: Community
-    path: /community/
-    indent: True
   - title: Browser compatibility
     path: /1.0/docs/browsers
     indent: True
