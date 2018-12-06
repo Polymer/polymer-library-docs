@@ -73,7 +73,7 @@
     "markdown-it": "^6.0.1",
     "markdown-it-attrs": "^0.1.8",
     "merge-stream": "^1.0.0",
-    "polymer-analyzer": "^2.0.0",
+    "polymer-analyzer": "^3.0.0",
     "polymer-cli": "^1.7.2",
     "run-sequence": "^1.1.4",
     "sw-precache": "^5.0.0",

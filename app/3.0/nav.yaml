@@ -229,6 +229,9 @@
   - title: array-splice.js
     path: /3.0/api/utils/array-splice
     indent: True
+  - title: async.js
+    path: /3.0/api/utils/async
+    indent: True
   - title: case-map.js
     path: /3.0/api/utils/case-map
     indent: True
@@ -265,6 +268,9 @@
   - title: style-gather.js
     path: /3.0/api/utils/style-gather
     indent: True
+  - title: telemetry.js
+    path: /3.0/api/utils/telemetry
+    indent: True
   - title: templatize.js
     path: /3.0/api/utils/templatize
     indent: True
@@ -272,6 +278,9 @@
   - header: Legacy
   - title: class.js
     path: /3.0/api/legacy/class
+    indent: True
+  - title: legacy-data-mixin.js
+    path: /3.0/api/legacy/legacy-data-mixin
     indent: True
   - title: legacy-element-mixin.js
     path: /3.0/api/legacy/legacy-element-mixin
