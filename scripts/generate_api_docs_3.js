@@ -53,8 +53,7 @@ async function exec(command) {
 const apiDocsPath = '../app/3.0/api/';
 const rootNamespace = 'Polymer';
 
-// TODO: Change to master once 3.x is merged into master.
-const releaseCommitish = '3.x';
+const releaseCommitish = 'master';
 
 process.on('unhandledRejection', (reason, p) => {
   console.log('Unhandled Rejection at: Promise ', p, ' reason: ', reason);
@@ -70,6 +69,8 @@ async function main() {
     await exec(`cd temp && git checkout ${releaseCommitish} && cd ..`);
     rootDir = path.resolve('temp');
   }
+  rootDir = path.resolve(rootDir);
+  console.log(rootDir);
   await exec(`rm -rf ${apiDocsPath}*`);
 
   const isInTests = /(\b|\/|\\)(test)(\/|\\)/;
@@ -258,6 +259,11 @@ const hardcodedDescriptions = new Map([
   ['lib/legacy/legacy-element-mixin.js', `
       Element class mixin that provides Polymer's "legacy" API.
   `],
+  ['lib/legacy/legacy-data-mixin.js', `
+       Mixin to selectively add back Polymer 1.x\'s undefined rules
+       governing when observers & computing functions run based
+      on all arguments being defined.
+  `],
   ['lib/legacy/mutable-data-behavior.js', `
       Behaviors for skipping strict dirty checking of objects and arrays.
   `],
@@ -294,15 +300,29 @@ const hardcodedDescriptions = new Map([
   ['lib/mixins/mutable-data.js', `
       Mixins for skipping strict dirty checking of objects and arrays.
   `],
-
-  ['lib/mixins/element-mixin.js',  `
-      Element class mixin that provides the core API for Polymer's
-      meta-programming features. Also provides some telemetry APIs.
+  ['lib/mixins/properties-mixin.js', `
+      Mixin that provides a minimal starting point to using the PropertiesChanged
+      mixin by providing a mechanism to declare properties in a static
+      getter.
   `],
-
+  ['lib/mixins/property-accessors.js', `
+       Element class mixin for reacting to property changes from generated property accessors.
+  `],
+  ['lib/mixins/property-effects.js', `
+      Element class mixin that provides meta-programming for Polymer's template
+      binding and data observation (collectively, "property effects") system.
+  `],
+  ['lib/mixins/strict-binding-parser.js', `
+      Mixin that parses binding expressions using a more correct (but slightly less
+      performant) parser than the default implemented in the property effects mixin.
+  `],
   ['lib/utils/array-splice.js', `
       Computes an array of splice records indicating the minimum edits required
       to transform the \`previous\` array into the \`current\` array.
+  `],
+  ['lib/utils/async.js', `
+      This module provides a number of strategies for enqueuing asynchronous
+      tasks.
   `],
   ['lib/utils/case-map.js', `
       Module that provides utilities for converting between "dash-case"
@@ -349,6 +369,9 @@ const hardcodedDescriptions = new Map([
   `],
   ['lib/utils/style-gather.js', `
       Module with utilities for collection CSS text from various sources.
+  `],
+  ['lib/utils/telemetry.js', `
+      Module for tracking element registrations.
   `],
   ['lib/utils/templatize.js', `
       Module for preparing and stamping templates that

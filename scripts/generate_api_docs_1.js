@@ -271,7 +271,7 @@ function namespacePage(namespace) {
 {% extends "templates/base-devguide.html" %}
 {% block title %} API Reference - ${name}{% endblock %}
 {% block content %}
-<iron-doc-namespace base-href="/1.0/docs/api" descriptor="${jsonString}"></iron-doc-namespace>
+<iron-doc-namespace base-href="/1.0/api" descriptor="${jsonString}"></iron-doc-namespace>
 {% endblock %}`;
 }
 

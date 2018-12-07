@@ -28,7 +28,7 @@ const apiDocsPath = '../app/2.0/api/';
 const rootNamespace = 'Polymer';
 
 // TODO: Check out an actual release SHA to generate docs off of.
-const releaseSha = 'master';
+const releaseSha = '2.x';
 
 process.on('unhandledRejection', (reason, p) => {
   console.log('Unhandled Rejection at: Promise ', p, ' reason: ', reason);
@@ -210,7 +210,7 @@ function elementPage(element) {
 {% extends "templates/base-devguide.html" %}
 {% block title %} API Reference - ${name}{% endblock %}
 {% block content %}
-<iron-doc-element base-href="/2.0/docs/api" descriptor="${jsonString}"></iron-doc-element>
+<iron-doc-element base-href="/2.0/api" descriptor="${jsonString}"></iron-doc-element>
 {% endblock %}`;
 }
 
@@ -222,7 +222,7 @@ function classPage(klass) {
 {% extends "templates/base-devguide.html" %}
 {% block title %} API Reference - ${name}{% endblock %}
 {% block content %}
-<iron-doc-class base-href="/2.0/docs/api" descriptor="${jsonString}"></iron-doc-class>
+<iron-doc-class base-href="/2.0/api" descriptor="${jsonString}"></iron-doc-class>
 {% endblock %}`;
 }
 
@@ -234,7 +234,7 @@ function mixinPage(mixin) {
 {% extends "templates/base-devguide.html" %}
 {% block title %} API Reference - ${name}{% endblock %}
 {% block content %}
-<iron-doc-mixin base-href="/2.0/docs/api" descriptor="${jsonString}"></iron-doc-mixin>
+<iron-doc-mixin base-href="/2.0/api" descriptor="${jsonString}"></iron-doc-mixin>
 {% endblock %}`;
 }
 
@@ -246,7 +246,7 @@ function namespacePage(namespace) {
 {% extends "templates/base-devguide.html" %}
 {% block title %} API Reference - ${name}{% endblock %}
 {% block content %}
-<iron-doc-namespace base-href="/2.0/docs/api" descriptor="${jsonString}"></iron-doc-namespace>
+<iron-doc-namespace base-href="/2.0/api" descriptor="${jsonString}"></iron-doc-namespace>
 {% endblock %}`;
 }
 

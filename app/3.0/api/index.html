@@ -215,8 +215,9 @@ gesture events to nodes">
           properties-mixin.js
         </a>
       </div>
-      <marked-element sanitize markdown="Mixin that provides a minimal starting point for using
-the PropertiesChanged mixin by providing a declarative `properties` object.">
+      <marked-element sanitize markdown="Mixin that provides a minimal starting point to using the PropertiesChanged
+      mixin by providing a mechanism to declare properties in a static
+      getter.">
       </marked-element>
     </section>
   
@@ -228,8 +229,7 @@ the PropertiesChanged mixin by providing a declarative `properties` object.">
           property-accessors.js
         </a>
       </div>
-      <marked-element sanitize markdown="Element class mixin for reacting to property changes from
-  generated property accessors.">
+      <marked-element sanitize markdown="Element class mixin for reacting to property changes from generated property accessors.">
       </marked-element>
     </section>
   
@@ -241,8 +241,8 @@ the PropertiesChanged mixin by providing a declarative `properties` object.">
           property-effects.js
         </a>
       </div>
-      <marked-element sanitize markdown="Element class mixin that provides meta-programming for Polymer&apos;s
-template binding and data observation system.">
+      <marked-element sanitize markdown="Element class mixin that provides meta-programming for Polymer&apos;s template
+      binding and data observation (collectively, &quot;property effects&quot;) system.">
       </marked-element>
     </section>
   
@@ -254,7 +254,8 @@ template binding and data observation system.">
           strict-binding-parser.js
         </a>
       </div>
-      <marked-element sanitize markdown="Mixin that parses binding expressions and generates corresponding metadata.">
+      <marked-element sanitize markdown="Mixin that parses binding expressions using a more correct (but slightly less
+      performant) parser than the default implemented in the property effects mixin.">
       </marked-element>
     </section>
   
@@ -287,6 +288,19 @@ template binding and data observation system.">
       </div>
       <marked-element sanitize markdown="Computes an array of splice records indicating the minimum edits required
       to transform the `previous` array into the `current` array.">
+      </marked-element>
+    </section>
+  
+
+
+    <section>
+      <div class="name">
+        <a href="utils/async">
+          async.js
+        </a>
+      </div>
+      <marked-element sanitize markdown="This module provides a number of strategies for enqueuing asynchronous
+      tasks.">
       </marked-element>
     </section>
   
@@ -371,19 +385,6 @@ template binding and data observation system.">
 
     <section>
       <div class="name">
-        <a href="utils/import-href">
-          import-href.js
-        </a>
-      </div>
-      <marked-element sanitize markdown="Module providing a convenience method for importing an HTML document
-      imperatively.">
-      </marked-element>
-    </section>
-  
-
-
-    <section>
-      <div class="name">
         <a href="utils/mixin">
           mixin.js
         </a>
@@ -457,6 +458,18 @@ template binding and data observation system.">
 
     <section>
       <div class="name">
+        <a href="utils/telemetry">
+          telemetry.js
+        </a>
+      </div>
+      <marked-element sanitize markdown="Module for tracking element registrations.">
+      </marked-element>
+    </section>
+  
+
+
+    <section>
+      <div class="name">
         <a href="utils/templatize">
           templatize.js
         </a>
@@ -483,6 +496,20 @@ template binding and data observation system.">
       </div>
       <marked-element sanitize markdown="Utilities for constructing a Polymer 1.x-compatible class, including
       mixing in behaviors.">
+      </marked-element>
+    </section>
+  
+
+
+    <section>
+      <div class="name">
+        <a href="legacy/legacy-data-mixin">
+          legacy-data-mixin.js
+        </a>
+      </div>
+      <marked-element sanitize markdown="Mixin to selectively add back Polymer 1.x&apos;s undefined rules
+       governing when observers &amp; computing functions run based
+      on all arguments being defined.">
       </marked-element>
     </section>
   
