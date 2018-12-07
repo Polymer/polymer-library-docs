@@ -130,7 +130,7 @@ customElements.define('child-class', ChildClass);
 #### Extend a base class template in a child class {#extendbase}
 
 You can use the functionality of embedded expressions in JavaScript template literals 
-to provide convenient ways to extend [inherited templates](#inherited-templates). 
+to provide convenient ways to extend [inherited templates](#inherit). 
 
 [Read more about template literals on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 

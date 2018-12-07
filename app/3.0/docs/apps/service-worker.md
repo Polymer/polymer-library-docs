@@ -28,7 +28,7 @@ accessing the network.
 Polymer CLI uses the [Service Worker Precache
 (`sw-precache`)](https://github.com/GoogleChromeLabs/sw-precache) library. All
 of the Polymer [build
-presets](/{{{polymer_version_dir}}}/docs/tools/polymer-json#presets), and the
+presets](/{{{polymer_version_dir}}}/docs/tools/polymer-cli-commands#presets), and the
 default build, include a service worker. 
 
 For background, gotchas and debugging tips on service workers, see 

@@ -76,7 +76,7 @@ You can use the `ready` callback for one-time initialization work after the elem
   Learn more: element registration
 </a></p>
 
-<p><a href="/{{{polymer_version_dir}}}/docs/devguide/registering-elements#lifecycle-callbacks" class="blue-button">
+<p><a href="/{{{polymer_version_dir}}}/docs/devguide/custom-elements#element-lifecycle" class="blue-button">
   Learn more: lifecycle callbacks
 </a></p>
 
