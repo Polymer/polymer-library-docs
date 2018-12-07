@@ -1,24 +1,14 @@
 {
   "private": true,
-  "engines": {
-    "node": ">=5.0.0"
-  },
   "scripts": {
-    "postinstall": "bower install; gulp",
-    "deploy": "scripts/deploy.sh",
-    "test": "(cd dist; python test_runner.py ${CLOUD_SDK-~/google-cloud-sdk} ../tests/)",
+    "postinstall": "bower install",
+    "build": "gulp",
+    "serve": "dev_appserver.py dist/app.yaml",
+    "deploy": "npm run build && gcloud app deploy dist/app.yaml --project polymer-library --no-promote",
     "generate-api-docs-2": "cd scripts && node generate_api_docs_2.js",
     "generate-api-docs-1": "cd scripts && node generate_api_docs_1.js",
     "generate-api-docs-3": "cd scripts && node generate_api_docs_3.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Polymer/docs"
-  },
-  "bugs": {
-    "url": "https://github.com/Polymer/docs/issues"
-  },
-  "homepage": "https://www.polymer-project.org/",
   "dependencies": {
     "@polymer/app-layout": "^3.0.0",
     "@polymer/app-route": "^3.0.0",
