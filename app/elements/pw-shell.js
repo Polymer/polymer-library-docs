@@ -277,7 +277,12 @@ class PwShell extends PolymerElement {
   }
 
   _onSearchInputChange() {
-    window.location = window.location.origin + '/search/?q=' + encodeURIComponent(this.$.searchBox.value);
+    let searchTerm = this.$.searchBox.value;
+    // Analytics
+    if (window.recordSearch) {
+      window.recordSearch(searchTerm);
+    }
+    window.location = window.location.origin + '/search/?q=' + encodeURIComponent(searchTerm);
   }
 
   _computeSection(path) {

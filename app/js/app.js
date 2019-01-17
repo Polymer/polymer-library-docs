@@ -25,9 +25,14 @@ function recordPageview(opt_url) {
   ga('devrelTracker.send', 'pageview', url);
 }
 
+function recordSearch(term) {
+  ga('send', 'event', 'search', term);
+}
+
 exports.recordPageview = recordPageview;
 exports.downloadStarter = downloadStarter;
 exports.recordPlunker = recordPlunker;
+exports.recordSearch = recordSearch;
 
 // Analytics -----
 /* jshint ignore:start */
