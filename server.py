@@ -86,29 +86,39 @@ def read_redirects_file(filename):
       literals[parts[0]] = parts[1]
   return {'literal': literals, 'wildcard': wildcards}
 
+
 def read_nav_file(filename, version):
   nav = load_yaml_config(filename)
+  # mapping of {'<shortpath>': {'<page>': '<path>'}}
+  page_map = {}
   for one_section in nav:
     one_section['version'] = version
-    base_path = '/%s/%s/' % (version, one_section['shortpath'])
+    shortpath = one_section['shortpath']
+    section_map = {'root': one_section['path']}
+    page_map[shortpath] = section_map
+    base_path = '/%s/%s/' % (version, shortpath)
     if 'items' in one_section:
-        for link in one_section['items']:
-          if 'path' in link:
-            # turn boolean flag into an additional CSS class.
-            if 'indent' in link and link['indent']:
-              link['indent'] = 'indent'
+      for link in one_section['items']:
+        if 'path' in link:
+          # turn boolean flag into an additional CSS class.
+          if 'indent' in link and link['indent']:
+            link['indent'] = 'indent'
+          else:
+            link['indent'] = ''
+          if not 'name' in link:
+            if link['path'].startswith(base_path):
+              link['name'] = link['path'].replace(base_path, '')
             else:
-              link['indent'] = ''
-            if not 'name' in link:
-              if link['path'].startswith(base_path):
-                link['name'] = link['path'].replace(base_path, '')
-              else:
-                link['name'] = 'index'
-  return nav
+              link['name'] = 'index'
+          section_map['/' + link['name']] = link['path']
+
+  return {'nav': nav, 'map': page_map}
+
 
 def handle_404(req, resp, data, e):
   resp.set_status(404)
   render(resp, '/404.html', data)
+
 
 def handle_500(req, resp, data, e):
   logging.exception(e)
@@ -146,7 +156,7 @@ class Site(webapp2.RequestHandler):
 
   def get_site_nav(self, version):
     nav_file_for_version = NAV_FILE % version
-    nav_cache = MEMCACHE_PREFIX + nav_file_for_version
+    nav_cache = MEMCACHE_PREFIX + nav_file_for_version + '-parsed'
     site_nav = memcache.get(nav_cache)
     if site_nav is None or IS_DEV:
       site_nav = read_nav_file(nav_file_for_version, version)
@@ -156,32 +166,30 @@ class Site(webapp2.RequestHandler):
   def get_section_nav(self, version, shortpath):
     site_nav = self.get_site_nav(version)
     if site_nav:
-      for section in site_nav:
+      for section in site_nav['nav']:
         if section['shortpath'] == shortpath:
           if 'items' in section:
             return section['items']
     return None
 
-  def get_versioned_paths(self, shortpath):
-    site_nav_1 = self.get_site_nav('1.0')
-    site_nav_2 = self.get_site_nav('2.0')
-    site_nav_3 = self.get_site_nav('3.0')
-    versioned_paths = ['','','']
-    if site_nav_1:
-      for section in site_nav_1:
-        if section['shortpath'] == shortpath:
-          versioned_paths[0] = section['path']
-          break
-    if site_nav_2:
-      for section in site_nav_2:
-        if section['shortpath'] == shortpath:
-          versioned_paths[1] = section['path']
-          break
-    if site_nav_3:
-      for section in site_nav_3:
-        if section['shortpath'] == shortpath:
-          versioned_paths[2] = section['path']
-          break
+  def get_versioned_paths(self, shortpath, page):
+    site_navs = [
+      self.get_site_nav('1.0'),
+      self.get_site_nav('2.0'),
+      self.get_site_nav('3.0'),
+    ]
+    versioned_paths = []
+    for nav in site_navs:
+      path = ''
+      if nav:
+        if shortpath in nav['map']:
+          navmap = nav['map'][shortpath]
+          path = navmap.get('root', "")
+          if page in navmap:
+            path = navmap[page]
+
+      versioned_paths.append(path)
+
     return versioned_paths
 
   def get(self, path):
@@ -204,20 +212,21 @@ class Site(webapp2.RequestHandler):
     elif path.endswith('.html'):
       return self.redirect('/' + path[:-len('.html')], permanent=True)
 
-    match = re.match('([0-9]+\.[0-9]+)/([^/]+)', path)
+    match = re.match('([0-9]+\.[0-9]+)/([^/]+)(/.*)?', path)
 
     if match:
       version = match.group(1)
       shortpath = match.group(2)
+      page = match.group(3)
 
       data = {
-        'site_nav': self.get_site_nav(version),
+        'site_nav': self.get_site_nav(version)['nav'],
         'section_nav': self.get_section_nav(version, shortpath),
         'path': '/' + path,
         # API docs are not editable in GH.
         'edit_on_github': path.find('.0/api/') == -1,
         'edit_on_github_path': BASE_EDIT_PATH % edit_on_github_path,
-        'versioned_paths': self.get_versioned_paths(shortpath),
+        'versioned_paths': self.get_versioned_paths(shortpath, page),
         # we use this as a macro in cross-references.
         # please don't take it away.
         'polymer_version_dir': version
@@ -225,7 +234,10 @@ class Site(webapp2.RequestHandler):
     else:
 
       data = {
-        'site_nav': self.get_site_nav('1.0') + self.get_site_nav('2.0') + self.get_site_nav('3.0')
+        'site_nav':
+          self.get_site_nav('1.0')['nav'] +
+          self.get_site_nav('2.0')['nav'] +
+          self.get_site_nav('3.0')['nav']
       }
 
     # Add .html to construct template path.
