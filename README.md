@@ -19,8 +19,8 @@ you'll need the following prerequisites:
 
 Set up your repo:
 
-    git clone https://github.com/Polymer/docs 
-    cd docs
+    git clone https://github.com/Polymer/polymer-library-docs 
+    cd polymer-library-docs
     npm install
 
 
