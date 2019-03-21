@@ -157,7 +157,7 @@ array.
 These observers differ from single-property observers in a few ways:
 
 *   Observers are not invoked until all dependent properties are defined (`!== undefined`).
-    So each dependent properties should have a default `value` defined in `properties` (or otherwise
+    So each dependent property should have a default `value` defined in `properties` (or otherwise
     be initialized to a non-`undefined` value) to ensure the observer is called.
 *   Observers do not receive `old` values as arguments, only new values.  Only single-property
     observers defined in the `properties` object receive both `old` and `new` values.
