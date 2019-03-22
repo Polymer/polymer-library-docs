@@ -1,15 +1,16 @@
 ## Polymer documentation site
 
-https://library.polymer-project.org/
+https://polymer-library.polymer-project.org/
 
 ### Install
 
-The documentation site runs in Google App Engine, using the App Engine Python standard environment. Before you start
-you'll need the following prerequisites:
+The documentation site runs in Google App Engine, using the App Engine Python
+standard environment. Before you start you'll need the following prerequisites:
 
 -   Python 2.7
 -   [Google Cloud SDK](https://cloud.google.com/sdk/)
--   App Engine Python standard environment. Ensure this is installed by running the following command:
+-   App Engine Python standard environment. Ensure this is installed by running
+    the following command:
 
         gcloud components install app-engine-python
         
@@ -26,53 +27,25 @@ Set up your repo:
 
 ### Running the site
 
-The first time you run the site, run `gulp` to build the site in its entirety:
+The first time you run the site, run `npm run build` to build the site in its
+entirety:
 
-    gulp
+    npm run build
 
-Then start the App Engine dev server on `dist/app.yaml`:
+Then start the App Engine dev server:
 
-    dev_appserver.py dist/
+    npm run serve
 
 The site will be served from http://localhost:8080.
-
-#### Making changes / watching files / live reload
-
-If you're making changes use the `watch` task. Optionally add `--reload` to live
-reload the tab when changes are saved.
-
-    gulp watch --reload
-
-The site will be served on http://localhost:3000. Making changes will refresh
-the browser tab.
-
-Optional flags:
-
-- `--reload`: refreshes the browser tab when changes are made
-- `--open`: opens a new browser tab when `gulp watch` is started
-
-**Tip** - run `gulp help` to see the list of available gulp tasks.
-
-### Run tests
-
-Install [WebTest framework](http://webtest.pythonpaste.org/en/latest/):
-
-    pip install WebTest
-
-Then run:
-
-    npm test
-
-If your Google Cloud SDK isn't installed in `~/google-cloud-sdk`, set the `CLOUD_SDK` environment
-variable to the path to the Cloud SDK:
-
-    export CLOUD_SDK=~/cloud/google-cloud-sdk
 
 
 ### Deployment
 
-Build and deploy version `YYY-MM-DD` of the site:
+Build and deploy a new version of the site:
 
-    gulp
-    npm run deploy YYYY-MM-DD
+    npm run deploy
+
+The site will be staged at a new URL (e.g.
+https://20181207t151022-dot-polymer-library.appspot.com). When ready, go to the
+App Engine console to migrate traffic to the new version.
 
