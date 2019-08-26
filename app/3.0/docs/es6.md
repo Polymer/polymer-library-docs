@@ -164,9 +164,9 @@ If you're putting together a custom build:
     using, but _not_ the polyfills.
 -   If you're serving compiled code to browsers that support native custom elements, inject the
     `custom-elements-es5-adapter.js` script at build time. The `polymer-build` library provides a
-    [addCustomElementsEs5Adapter method](https://github.com/Polymer/polymer-build#custom-elements-es5-adapter)
+    [addCustomElementsEs5Adapter method](https://github.com/Polymer/tools/blob/master/packages/build/README.md#custom-elements-es5-adapter)
     to inject the script. If that method doesn't work with your build system, see the
-    [webcomponentsjs README](https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs)
+    [webcomponentsjs README](https://github.com/webcomponents/polyfills/blob/master/packages/webcomponentsjs/README.md#custom-elements-es5-adapterjs)
     for details on using the script.
 
 
