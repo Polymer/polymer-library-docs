@@ -294,6 +294,9 @@
   - title: Polymer.mixinBehaviors
     path: /2.0/api/#function-Polymer.mixinBehaviors
     indent: True 
+  - title: Polymer.setLegacyOptimizations
+    path: /2.0/api/#function-Polymer.setLegacyOptimizations
+    indent: True 
   - title: Polymer.setPassiveTouchGestures
     path: /2.0/api/#function-Polymer.setPassiveTouchGestures
     indent: True 
@@ -337,5 +340,8 @@
     indent: True 
   - title: Polymer.telemetry
     path: /2.0/api/namespaces/Polymer.telemetry
+    indent: True 
+  - title: Polymer.Templatize
+    path: /2.0/api/namespaces/Polymer.Templatize
     indent: True 
   - endheader: True 
