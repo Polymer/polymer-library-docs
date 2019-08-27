@@ -264,6 +264,15 @@ h3 {
     color: $blue-600;
     background: transparent;
   }
+  
+  /* Not quite MD, but LitElement (among other things) 
+   * looks weird in all caps, and looks unbalanced next to 
+   * other buttons if it's camel case but the same size
+   * as the regular blue buttons. */
+  &.nocap {
+    text-transform: none;
+    font-size: 16px;
+  }
 }
 
 .subsection:not(:last-of-type) {
