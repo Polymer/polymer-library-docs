@@ -72,6 +72,7 @@ Unlike 0.5, the
 property's type is explicit, specified using the type's constructor. See
 <a href="#attribute-deserialization">attribute deserialization</a> for more information.
 
+Default: <code>String</code>
 </td>
 </tr>
 <tr>
@@ -84,6 +85,8 @@ invoked and the return value is used as the default value of the property. If
 the default value should be an array or object unique to the instance, create
 the array or object inside a function. See
 <a href="#configure-values">Configuring default property values</a> for more information.
+
+Default: <code>undefined</code>
 </td>
 </tr>
 <tr>
@@ -97,6 +100,8 @@ For other property types, the attribute value is a string representation of the
 property value. Equivalent to <code>reflect</code> in Polymer 0.5.
 See <a href="#attribute-reflection">Reflecting properties to attributes</a> for
 more information.
+
+Default: false
 </td>
 </tr>
 <tr>
@@ -104,6 +109,8 @@ more information.
 <td>Type: <code>boolean</code><br>
 
 If <code>true</code>, the property can't be set directly by assignment or data binding. See <a href="#read-only">Read-only properties</a>.
+
+Default: false
 </td>
 </tr>
 <tr>
@@ -114,6 +121,8 @@ If <code>true</code>, the property is available for two-way data binding. In add
 event, <code><var>property-name</var>-changed</code> is fired whenever the
 property changes. See <a href="#notify">Property change notification events (notify)</a>
 for more information.
+
+Default: false
 </td>
 </tr>
 <tr>
@@ -124,6 +133,8 @@ The value is interpreted as a method name and argument list. The method is invok
 to calculate the value whenever any of the argument values changes. Computed
 properties are always read-only. See <a href="observers#computed-properties">Computed properties</a>
 for more information.
+
+Default: none
 </td>
 </tr>
 <tr>
@@ -133,6 +144,8 @@ for more information.
 The value is interpreted as a method name to be invoked when the property value
 changes. See <a href="observers">Property change callbacks (observers)</a>
 for more information.
+
+Default: none
 </td>
 </tr>
 </table>
