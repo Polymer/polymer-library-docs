@@ -29,7 +29,7 @@ Here's a quick sample of defining an element in Polymer 3.0:
   </div>
 </demo-tabs>
 
-**Related products.** For new development, you should also consider [LitElement](https://github.com/Polymer/lit-element/blob/master/README.md), a light, performant, next-generation base class for custom elements. For future application projects, consider starting with the [PWA starter kit](https://github.com/Polymer/pwa-starter-kit/blob/master/README.md), a next-generation Progressive Web App template that uses LitElement and Redux. Both LitElement and PWA starter kit are in preview.
+**Related product.** For new development, you should consider [LitElement](https://github.com/Polymer/lit-element/blob/master/README.md), a light, performant, next-generation base class for custom elements.
 {.alert .alert-tip}
 
 ## API changes 
