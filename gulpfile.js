@@ -9,8 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 'use strict';
 
-// const gulp = require('gulp');
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
+// const gulp = require('gulp-help')(require('gulp'));
 const $ = require('gulp-load-plugins')();
 const swPrecache = require('sw-precache');
 const argv = require('yargs').argv;
@@ -37,7 +37,7 @@ const markdownIt = require('markdown-it')({
 const markdownItAttrs = require('markdown-it-attrs');
 const merge = require('merge-stream');
 const path = require('path');
-const runSequence = require('run-sequence');
+// const runSequence = require('run-sequence');
 const toc = require('toc');
 const composer = require('gulp-uglify/composer');
 const gulpUglifyEs = composer(require('uglify-es'), console);
@@ -153,7 +153,7 @@ gulp.task('generate-service-worker', function() {
   return swPrecache.write(path.join(rootDir, 'service-worker.js'), config);
 });
 
-gulp.task('style', 'Compile sass, autoprefix, and minify CSS', function() {
+gulp.task('style', /* 'Compile sass, autoprefix, and minify CSS', */ function() {
   const sassOpts = {
     precision: 10,
     outputStyle: 'expanded',
@@ -172,7 +172,7 @@ gulp.task('style', 'Compile sass, autoprefix, and minify CSS', function() {
     .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('images', 'Optimize images', function() {
+gulp.task('images', /* 'Optimize images', */ function() {
   return gulp.src('app/images/**/*')
     .pipe($.changed('dist/images'))
     .pipe($.imagemin({
@@ -228,7 +228,7 @@ function convertMarkdownToHtml(templateName) {
   });
 }
 
-gulp.task('md:docs', 'Docs markdown -> HTML conversion. Syntax highlight and TOC generation', function() {
+gulp.task('md:docs', /* 'Docs markdown -> HTML conversion. Syntax highlight and TOC generation', */ function() {
   return gulp.src([
       'app/**/*.md',
       '!app/{bower_components,elements,images,js,sass}/**',
@@ -238,7 +238,7 @@ gulp.task('md:docs', 'Docs markdown -> HTML conversion. Syntax highlight and TOC
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('jshint', 'Lint JS', function() {
+gulp.task('jshint', /* 'Lint JS', */ function() {
   return gulp.src([
       'gruntfile.js',
       'app/js/**/*.js',
@@ -252,7 +252,7 @@ gulp.task('jshint', 'Lint JS', function() {
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
+gulp.task('js', /* 'Minify JS to dist/', ['jshint'], */ function() {
   const externalJs = require('polymer-cli/node_modules/polymer-build/lib/external-js');
   const helperCodeSnippets = [
     externalJs.getBabelHelpersFull(),
@@ -268,14 +268,14 @@ gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('build-bundles', 'Build element bundles', function() {
+gulp.task('build-bundles', /* 'Build element bundles', */ function() {
   return merge(
     $.run('polymer build').exec(),
     $.run('polymer build', {cwd: 'app/2.0/samples/homepage/contact-card'}).exec(),
     $.run('polymer build', {cwd: 'app/2.0/samples/homepage/google-map'}).exec())
 });
 
-gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', function() {
+gulp.task('copy', /*'Copy site files (polyfills, templates, etc.) to dist/',*/ function() {
   const app = gulp.src([
       '*',
       'app/manifest.json',
@@ -330,7 +330,7 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
   return merge(app, docs, samples, gae, webcomponentsjs, bundles, demo1, demo2);
 });
 
-gulp.task('watch', 'Watch files for changes', function() {
+gulp.task('watch', /* 'Watch files for changes',*/ function() {
   browserSync.init({
     notify: true,
     open: !!argv.open,
@@ -338,7 +338,7 @@ gulp.task('watch', 'Watch files for changes', function() {
   });
   gulp.watch('app/sass/**/*.scss', ['style', reload]);
   gulp.watch('app/elements/**/*', function() {
-    runSequence('build-bundles', 'copy');
+    gulp.series('build-bundles', 'copy');
     reload();
   });
   gulp.watch('app/js/*.js', ['js', reload]);
@@ -361,15 +361,15 @@ gulp.task('watch', 'Watch files for changes', function() {
   }
 });
 
-gulp.task('clean', 'Remove dist/ and other built files', function() {
+gulp.task('clean', /* 'Remove dist/ and other built files',*/ function() {
   return del(['dist', 'app/css']);
 });
 
 // Default task. Build the dest dir.
-gulp.task('default', 'Build site', ['clean', 'jshint'], function(done) {
-  runSequence(
+gulp.task('default', /* 'Build site', ['clean', 'jshint'],*/ 
+  gulp.series(
     'build-bundles',
-    ['copy', 'md:docs', 'style', 'images', 'js'],
+    gulp.parallel('copy', 'md:docs', 'style', 'images', 'js'),
     'generate-service-worker',
-    done);
-});
+    )
+);
