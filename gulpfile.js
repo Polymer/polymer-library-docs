@@ -282,10 +282,8 @@ gulp.task('js', js);
 
 const buildBundles = function() {
   return merge(
-    $.run('polymer build').exec(),
-    $.run('polymer build', {cwd: 'app/2.0/samples/homepage/contact-card'}).exec(),
-    $.run('polymer build', {cwd: 'app/2.0/samples/homepage/google-map'}).exec())
-  }
+    $.run('polymer build').exec());
+}
 
 buildBundles.description =  'Build element bundles';
 gulp.task('build-bundles', buildBundles);
