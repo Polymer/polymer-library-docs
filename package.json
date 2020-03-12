@@ -33,7 +33,7 @@
     "web-animations-js": "^2.3.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.9.12",
+    "browser-sync": "^2.26.7",
     "clone": "^2.1.0",
     "del": "^2.0.2",
     "dom-serializer": "github:cheeriojs/dom-serializer#d26e453",
@@ -52,7 +52,7 @@
     "gulp-load-plugins": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
     "highlight.js": "^9.12.0",
@@ -62,7 +62,7 @@
     "markdown-it-attrs": "^0.1.8",
     "merge-stream": "^1.0.0",
     "polymer-analyzer": "^3.0.0",
-    "polymer-cli": "^1.7.2",
+    "polymer-cli": "^1.9.11",
     "sw-precache": "^5.0.0",
     "toc": "PolymerLabs/node-toc",
     "uglify-es": "^3.3.9",
