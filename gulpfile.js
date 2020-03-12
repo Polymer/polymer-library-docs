@@ -235,7 +235,7 @@ function convertMarkdownToHtml(templateName) {
 const mdDocs = function() {
   return gulp.src([
       'app/**/*.md',
-      '!app/{bower_components,elements,images,js,sass}/**',
+      '!app/{elements,images,js,sass}/**',
     ], {base: 'app/'})
     .pipe(convertMarkdownToHtml('templates/page.template'))
     .pipe($.rename({extname: '.html'}))
@@ -301,8 +301,7 @@ const copy = function() {
   // the page to look for code snippets, so it's only used for non-markdown pages.
   const docs = gulp.src([
       'app/**/*.html',
-      '!app/{bower_components,elements}/**',
-      '!app/2.0/samples/homepage/**',
+      '!app/elements/**',
      ], {base: 'app/'})
     .pipe($.highlight({
       selector: 'pre code'
@@ -331,16 +330,8 @@ const copy = function() {
       'build/default/app/elements/*'
     ])
     .pipe(gulp.dest('dist/elements'));
-  const demo1 = gulp.src([
-      'app/2.0/samples/homepage/contact-card/build/default/**/*'
-    ])
-    .pipe(gulp.dest('dist/2.0/samples/homepage/contact-card'));
-  const demo2 = gulp.src([
-      'app/2.0/samples/homepage/google-map/build/default/**/*'
-    ])
-    .pipe(gulp.dest('dist/2.0/samples/homepage/google-map'));
 
-  return merge(app, docs, samples, gae, webcomponentsjs, bundles, demo1, demo2);
+  return merge(app, docs, samples, gae, webcomponentsjs, bundles);
 }
 
 copy.description = 'Copy site files (polyfills, templates, etc.) to dist/';
