@@ -9,8 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 'use strict';
 
-// const gulp = require('gulp');
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const swPrecache = require('sw-precache');
 const argv = require('yargs').argv;
@@ -37,7 +36,6 @@ const markdownIt = require('markdown-it')({
 const markdownItAttrs = require('markdown-it-attrs');
 const merge = require('merge-stream');
 const path = require('path');
-const runSequence = require('run-sequence');
 const toc = require('toc');
 const composer = require('gulp-uglify/composer');
 const gulpUglifyEs = composer(require('uglify-es'), console);
@@ -153,7 +151,7 @@ gulp.task('generate-service-worker', function() {
   return swPrecache.write(path.join(rootDir, 'service-worker.js'), config);
 });
 
-gulp.task('style', 'Compile sass, autoprefix, and minify CSS', function() {
+const style = function() {
   const sassOpts = {
     precision: 10,
     outputStyle: 'expanded',
@@ -170,9 +168,12 @@ gulp.task('style', 'Compile sass, autoprefix, and minify CSS', function() {
       tiny: true
     }))
     .pipe(gulp.dest('dist/css'))
-});
+}
 
-gulp.task('images', 'Optimize images', function() {
+style.description = 'Compile sass, autoprefix, and minify CSS';
+gulp.task(style);
+
+const images = function() {
   return gulp.src('app/images/**/*')
     .pipe($.changed('dist/images'))
     .pipe($.imagemin({
@@ -181,7 +182,10 @@ gulp.task('images', 'Optimize images', function() {
       svgoPlugins: [{convertTransform: false}]
     }))
     .pipe(gulp.dest('dist/images'));
-});
+};
+
+images.description = 'Optimize images';
+gulp.task(images);
 
 function convertMarkdownToHtml(templateName) {
   return $.grayMatter(function(file) { // pull out front matter data.
@@ -228,17 +232,20 @@ function convertMarkdownToHtml(templateName) {
   });
 }
 
-gulp.task('md:docs', 'Docs markdown -> HTML conversion. Syntax highlight and TOC generation', function() {
+const mdDocs = function() {
   return gulp.src([
       'app/**/*.md',
-      '!app/{bower_components,elements,images,js,sass}/**',
+      '!app/{elements,images,js,sass}/**',
     ], {base: 'app/'})
     .pipe(convertMarkdownToHtml('templates/page.template'))
     .pipe($.rename({extname: '.html'}))
     .pipe(gulp.dest('dist'));
-});
+};
 
-gulp.task('jshint', 'Lint JS', function() {
+mdDocs.description = 'Docs markdown -> HTML conversion. Syntax highlight and TOC generation';
+gulp.task('md:docs', mdDocs);
+
+const jshint = function() {
   return gulp.src([
       'gruntfile.js',
       'app/js/**/*.js',
@@ -250,9 +257,11 @@ gulp.task('jshint', 'Lint JS', function() {
     .pipe($.jshint({esnext: true}))
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-});
+};
+jshint.description = 'Lint JS';
+gulp.task('jshint', jshint);
 
-gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
+const js = function() {
   const externalJs = require('polymer-cli/node_modules/polymer-build/lib/external-js');
   const helperCodeSnippets = [
     externalJs.getBabelHelpersFull(),
@@ -266,16 +275,20 @@ gulp.task('js', 'Minify JS to dist/', ['jshint'], function() {
     .pipe($.header(helperCodeSnippets.join('')))
     .pipe(gulpUglifyEs()) // Minify js output
     .pipe(gulp.dest('dist/js'));
-});
+}
 
-gulp.task('build-bundles', 'Build element bundles', function() {
+js.description = 'Minify JS to dist/';
+gulp.task('js', js);
+
+const buildBundles = function() {
   return merge(
-    $.run('polymer build').exec(),
-    $.run('polymer build', {cwd: 'app/2.0/samples/homepage/contact-card'}).exec(),
-    $.run('polymer build', {cwd: 'app/2.0/samples/homepage/google-map'}).exec())
-});
+    $.run('polymer build').exec());
+}
 
-gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', function() {
+buildBundles.description =  'Build element bundles';
+gulp.task('build-bundles', buildBundles);
+
+const copy = function() {
   const app = gulp.src([
       '*',
       'app/manifest.json',
@@ -288,8 +301,7 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
   // the page to look for code snippets, so it's only used for non-markdown pages.
   const docs = gulp.src([
       'app/**/*.html',
-      '!app/{bower_components,elements}/**',
-      '!app/2.0/samples/homepage/**',
+      '!app/elements/**',
      ], {base: 'app/'})
     .pipe($.highlight({
       selector: 'pre code'
@@ -318,33 +330,28 @@ gulp.task('copy', 'Copy site files (polyfills, templates, etc.) to dist/', funct
       'build/default/app/elements/*'
     ])
     .pipe(gulp.dest('dist/elements'));
-  const demo1 = gulp.src([
-      'app/2.0/samples/homepage/contact-card/build/default/**/*'
-    ])
-    .pipe(gulp.dest('dist/2.0/samples/homepage/contact-card'));
-  const demo2 = gulp.src([
-      'app/2.0/samples/homepage/google-map/build/default/**/*'
-    ])
-    .pipe(gulp.dest('dist/2.0/samples/homepage/google-map'));
 
-  return merge(app, docs, samples, gae, webcomponentsjs, bundles, demo1, demo2);
-});
+  return merge(app, docs, samples, gae, webcomponentsjs, bundles);
+}
 
-gulp.task('watch', 'Watch files for changes', function() {
+copy.description = 'Copy site files (polyfills, templates, etc.) to dist/';
+gulp.task('copy', copy);
+
+const watch = function() {
   browserSync.init({
     notify: true,
     open: !!argv.open,
     proxy: 'localhost:8080' // proxy serving through app engine.
   });
-  gulp.watch('app/sass/**/*.scss', ['style', reload]);
+  gulp.watch('app/sass/**/*.scss', gulp.series('style', reload));
   gulp.watch('app/elements/**/*', function() {
-    runSequence('build-bundles', 'copy');
+    gulp.series('build-bundles', 'copy');
     reload();
   });
-  gulp.watch('app/js/*.js', ['js', reload]);
+  gulp.watch('app/js/*.js', gulp.series('js', reload));
 
-  gulp.watch('app/**/*.md', ['md:docs', reload]);
-  gulp.watch(['templates/*.html', 'app/**/*.html'], ['copy', reload]);
+  gulp.watch('app/**/*.md', gulp.series('md:docs', reload));
+  gulp.watch(['templates/*.html', 'app/**/*.html'], gulp.series('copy', reload));
   // Watch for changes to server itself.
   gulp.watch('*.py', function(files) {
     gulp.src('*.py').pipe(gulp.dest('dist'));
@@ -354,22 +361,29 @@ gulp.task('watch', 'Watch files for changes', function() {
     gulp.src('app/**/*.{yml,yaml}').pipe(gulp.dest('dist'));
     reload();
   });
-}, {
+}
+
+watch.description = 'Watch files for changes';
+gulp.task('watch', watch, {
   options: {
     'reload': 'Reloads browser tab when watched files change',
     'open': 'Opens a browser tab when launched'
   }
 });
 
-gulp.task('clean', 'Remove dist/ and other built files', function() {
+const clean = function() {
   return del(['dist', 'app/css']);
-});
+}
+
+clean.description = 'Remove dist/ and other built files';
+gulp.task('clean', clean);
 
 // Default task. Build the dest dir.
-gulp.task('default', 'Build site', ['clean', 'jshint'], function(done) {
-  runSequence(
+const defaultTask =  gulp.series(
     'build-bundles',
-    ['copy', 'md:docs', 'style', 'images', 'js'],
+    gulp.parallel('copy', 'md:docs', 'style', 'images', 'js'),
     'generate-service-worker',
-    done);
-});
+  );
+
+defaultTask.description = 'Build site';
+gulp.task('default', defaultTask);
