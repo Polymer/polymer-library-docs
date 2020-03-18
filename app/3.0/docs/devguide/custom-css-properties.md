@@ -427,7 +427,7 @@ class XCustom extends PolymerElement {
       });
     }
   }
-  static template get (){
+  static get template() {
     return html`
       <style>
         :host {
@@ -545,7 +545,7 @@ styling for custom elements, which is the primary goal of the shim.
 
 ```js
 class MyElement extends PolymerElement {
-  static template get () {
+  static get template() {
     return html`
       <style>
       :host {
