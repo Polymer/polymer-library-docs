@@ -12,6 +12,6 @@ title: Release notes
   }
 </style>
 
-## [Release 3.0.2](https://github.com/Polymer/polymer/releases/tag/v3.0.0) (2018-05-09) {#v-3-0-0}
+See the [Changelog](https://github.com/Polymer/polymer/blob/master/CHANGELOG.md) for information on 3.x releases.
 
-See [What's new in 3.0](about_30) for a summary of changes in 3.0.
+See [What's new in 3.0](about_30) for a summary of changes between 2.x and 3.0.
