@@ -112,7 +112,7 @@ class PwFooter extends PolymerElement {
           <span class="additional-text">Copyright 2014-2020 The Polymer Project Authors. 
           Code licensed under the
           <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>. 
-          Documentation licensed under CC BY 4.0.
+          Documentation licensed under CC BY 3.0.
           </span>
         </div>
         <div>
