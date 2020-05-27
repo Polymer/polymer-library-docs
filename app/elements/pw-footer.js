@@ -109,10 +109,10 @@ class PwFooter extends PolymerElement {
       <div class="copyright layout horizontal">
         <div class="flex">
           Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.  
-          <span class="additional-text">Copyright 2018 The Polymer Project Authors. 
+          <span class="additional-text">Copyright 2014-2020 The Polymer Project Authors. 
           Code licensed under the
           <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>. 
-          Documentation licensed under CC BY 3.0.
+          Documentation licensed under CC BY 4.0.
           </span>
         </div>
         <div>
