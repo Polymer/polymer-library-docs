@@ -125,10 +125,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   background-color: #FBE9E7;
   margin: 0;
   padding: 10px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.devguide-main .version-alert a {
+  font-weight: bold;
+}
+
+.devguide-main .version-alert:not(.upgrade-alert) {
+  border-top: 1px solid #6b6b6b;
 }
 
 .devguide-main .version-alert img {
-  vertical-align: middle;
+  height: 36px;
+  margin-right: 12px;
 }
 
 @media (max-width: 500px) {

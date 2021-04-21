@@ -2,8 +2,14 @@
 # Wildcards ending in *: redirects all paths matching the prefix,
 # replacing the prefix with the second path.
 
-- /1.0/ /
-- /2.0/ /
+# Remove landing page, route traffic to guides page
+
+- / /3.0/docs/devguide/feature-overview
+- /1.0/ /1.0/docs/devguide/feature-overview
+- /2.0/ /2.0/docs/devguide/feature-overview
+- /3.0/ /3.0/docs/devguide/feature-overview
+
+ 
 
 # bulk redirects
 # 0.5 to the legacy site
