@@ -25,7 +25,7 @@ class PwFooter extends PolymerElement {
       }
 
       .footer-links {
-        /* background: #263238;  /* blue-grey-900 */ 
+        /* background: #263238;  /* blue-grey-900 */
         background: white;
         padding: 30px 10px;
       }
@@ -36,7 +36,7 @@ class PwFooter extends PolymerElement {
 
       .footer-links .title {
         font-family: 'Roboto Slab', 'Roboto', 'Noto', sans-serif;
-        color: black; 
+        color: black;
         border-top: 1px solid #707375;
         padding-top: 10px;
         font-size: 13px;
@@ -55,7 +55,7 @@ class PwFooter extends PolymerElement {
         color: black;
         padding: 10px;
       }
-      
+
       .copyright div {
         font-size: 16px;
       }
@@ -105,19 +105,19 @@ class PwFooter extends PolymerElement {
       }
     </style>
 
-    <footer>        
+    <footer>
       <div class="copyright layout horizontal">
         <div class="flex">
-          Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.  
-          <span class="additional-text">Copyright 2014-2020 The Polymer Project Authors. 
+          Brought to you by <a href="https://www.polymer-project.org">The Polymer Project</a>.
+          <span class="additional-text">Copyright 2014-2020 The Polymer Project Authors.
           Code licensed under the
-          <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>. 
+          <a target="_blank" href="http://polymer.github.io/LICENSE.txt">BSD License</a>.
           Documentation licensed under CC BY 3.0.
           </span>
         </div>
         <div>
           <a href="https://www.github.com/polymer/polymer" rel="noopener" target="_blank"><iron-icon icon="social-icons:github"></iron-icon></a>
-          <a href="https://www.twitter.com/polymer" rel="noopener" target="_blank"><iron-icon icon="social-icons:twitter"></iron-icon></a> 
+          <a href="https://www.twitter.com/polymerLibrary" rel="noopener" target="_blank"><iron-icon icon="social-icons:twitter"></iron-icon></a>
           <a href="https://groups.google.com//forum/#!forum/polymer-dev" rel="noopener" target="_blank"><iron-icon icon="communication:email"<iron-icon></iron-icon></a>
         </div>
       </div>
