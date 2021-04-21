@@ -55,13 +55,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </a>
             {% endif %}
           </header>
-
+          <div class="version-alert upgrade-alert">
+            <img src="/images/alerts/upgrade.svg" height="36px">
+            <p>
+              <strong>
+                The Polymer library is in maintenance mode. For new development, we recommend <a href="https://lit.dev">Lit</a>.
+              </strong>
+            </p>
+          </div>
           {% if polymer_version_dir != '3.0' %}
-            <p class="version-alert">
-              <img src="/images/alerts/warning.svg">
-              You're viewing an older version of Polymer.
+          <div class="version-alert">
+          <img src="/images/alerts/info.svg">
+            <p>    
+              You're viewing an older version of the Polymer library documentation.
               Please see <a href="{{{versioned_paths[2]}}}">Polymer 3.0</a> for the latest.
             </p>
+          </div>
           {% endif %}
         {% endif %}
 
