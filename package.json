@@ -47,7 +47,7 @@
     "gulp-highlight": "^2.1.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
-    "gulp-jshint": "^1.12.0",
+    "gulp-jshint": "^2.1.0",
     "gulp-license": "^1.0.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-rename": "^1.2.2",
