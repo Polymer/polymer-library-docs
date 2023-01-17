@@ -3,6 +3,18 @@ subtitle: Feature Overview
 title: Polymer library
 ---
 
+## Notice: Not under active development {#support-notice}
+
+**The Polymer library is no longer under active development.** Only very select changes are being made to the code at this point, and newly-reported bugs are unlikely to be fixed unless they represent critical security issues.
+
+**Polymer has been superseded by <a href="https://lit.dev">Lit</a>, a smaller, faster, next-generation web components library.**  Thanks to the interoperability of web components, elements built with Polymer 3.0 and Lit  can be mixed and matched in the same application. You can upgrade a Polymer project to Lit one element at a time. 
+
+*   For information on upgrading, see <a href="https://lit.dev/articles/lit-for-polymer-users/">Lit for Polymer users</a>.
+
+*   For help with existing Polymer library apps or getting up to speed on Lit, we recommend joining the <a href="https://lit.dev/discord/">Lit Discord server</a>.
+
+## Feature overview
+
 The Polymer library provides a set of features for creating custom elements. These features are
 designed to make it easier and faster to make custom elements that work like standard DOM elements.
 Similar to standard DOM elements, Polymer elements can be:

@@ -29,7 +29,7 @@ Here's a quick sample of defining an element in Polymer 3.0:
   </div>
 </demo-tabs>
 
-**Related product.** For new development, you should consider [LitElement](https://github.com/Polymer/lit-element/blob/master/README.md), a light, performant, next-generation base class for custom elements.
+**Related product.** For new development, you should consider [Lit](https://lit.dev), a light, performant, next-generation library for web components.
 {.alert .alert-tip}
 
 ## API changes 
