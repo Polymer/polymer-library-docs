@@ -7,9 +7,7 @@ title: Polymer library
 
 **The Polymer library is no longer under active development.** Only very select changes are being made to the code at this point, and newly-reported bugs are unlikely to be fixed unless they represent critical security issues.
 
-*   If you're starting a new project, or doing significant work on an existing one, we recommend using the <a href="https://lit.dev">Lit library</a>, a next-generation web components library. 
-
-    Thanks to the interoperability of web components, elements built with Polymer 3.0 and Lit  can be mixed and matched in the same application. You can upgrade a Polymer project to Lit one element at a time. 
+**Polymer has been superseded by <a href="https://lit.dev">Lit</a>, a smaller, faster, next-generation web components library.**  Thanks to the interoperability of web components, elements built with Polymer 3.0 and Lit  can be mixed and matched in the same application. You can upgrade a Polymer project to Lit one element at a time. 
 
 *   For information on upgrading, see <a href="https://lit.dev/articles/lit-for-polymer-users/">Lit for Polymer users</a>.
 
